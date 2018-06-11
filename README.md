@@ -34,4 +34,4 @@ Read [our code of conduct](https://github.com/oply/joey/blob/master/CODE_OF_COND
 
 ### Licence
 
-Oply Wombat is [MIT Licenced](https://github.com/oply/joey/blob/master/LICENSE.md).
+Joey by Oply is [MIT Licenced](https://github.com/oply/joey/blob/master/LICENSE.md).
