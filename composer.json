@@ -1,7 +1,6 @@
 {
     "name": "vendor/joey",
     "require-dev": {
-        "symfony/var-dumper": "^4.1"
     },
     "license": "MIT",
     "authors": [
@@ -11,7 +10,9 @@
         }
     ],
     "require": {
-        "symfony/routing": "^4.1"
+        "symfony/routing": "^4.1",
+        "symfony/var-dumper": "^4.1",
+        "twig/twig": "^2.4"
     },
     "autoload": {
         "psr-4": {
