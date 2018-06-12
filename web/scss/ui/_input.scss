@@ -2,5 +2,11 @@
     font-size: 1rem;
     padding: .5rem 1rem;
     border: 1px solid #E3E9F3;
-    border-radius: $radius-small;
+    border-radius: $radiusSmall;
+    transition: .2s $cubic01;
+
+    &:focus {
+        border-color: $blue;
+        transition: .3s $cubic01;
+    }
 }
