@@ -20,5 +20,7 @@ class Connect
                 die("Tu te connecte pas du tout");
             }
         }
+
+        return self::$pdo;
     }
 }

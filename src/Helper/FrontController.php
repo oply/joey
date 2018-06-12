@@ -23,9 +23,10 @@ class FrontController
                     $output = $controller->home();
                     break;
 
+
 //                case "delete":
-//                    $controller = new PageController();
-//                    $output     = $controller->adminDelete();
+//                    $controller = new HomeController();
+//                    $output     = $controller->de();
 //                    break;
 //
 //                case "details":

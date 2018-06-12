@@ -12,7 +12,8 @@ class HomeController extends BaseController
     {
 
         $sales = new Sales();
-//        dump($sales->add());
+        $result = $sales->add();
+//        dump($result);
 //        die;
 
 
