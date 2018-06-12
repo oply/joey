@@ -1,0 +1,13 @@
+{
+  "name": "joey",
+  "author": "Oply",
+  "license": "MIT",
+  "version": "0.0.0",
+  "description": "Joey is an open-source and easy-to-use CRM created by Oply.",
+  "main": "index.js",
+  "repository": "github:oply/joey",
+  "homepage": "https://github.com/alisonsayarath/oply#readme",
+  "dependencies": {
+    "compass": "^0.1.1"
+  }
+}
