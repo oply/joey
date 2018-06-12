@@ -1,0 +1,16 @@
+{
+    "name": "vendor/joey",
+    "require-dev": {
+        "symfony/var-dumper": "^4.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "benImran",
+            "email": "benchaa.said-medjahed@hetic.net"
+        }
+    ],
+    "require": {
+        "symfony/routing": "^4.1"
+    }
+}
