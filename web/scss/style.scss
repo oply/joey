@@ -1,8 +1,5 @@
-@import 'settings/index';
-@import 'pages/index';
-@import 'ui/form/index';
 // TOOLS
-@import 'tools/variable';
+@import 'tools/variables';
 @import 'tools/reset';
 @import 'tools/medias';
 
@@ -12,8 +9,12 @@
 
 
 // UI
-
 @import 'ui/btn';
+
+// form elements
+@import 'ui/field';
+@import 'ui/label';
+@import 'ui/input';
 
 
 
