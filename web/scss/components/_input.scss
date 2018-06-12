@@ -1,0 +1,34 @@
+.input__text {
+    font-size: .75rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid $dividerLight;
+    border-radius: $radiusSmall;
+    transition: .2s $cubic01;
+
+    &:focus {
+        border-color: $blue;
+        transition: .3s $cubic01;
+    }
+}
+
+.input__text-icon {
+    display: flex;
+    border: 1px solid $dividerLight;
+    border-radius: $radiusSmall;
+
+    .input__text {
+        flex: 1;
+        border: none;
+    }
+    
+    .input__icon {
+        display: flex;
+        width: 3.5rem;
+        align-items: center;
+        justify-content: center;
+        font-weight: $fwLight;
+        font-size: .75rem;
+        background: #F3FCFF;
+        border-right: 1px solid $dividerLight;
+    }
+}

@@ -7,15 +7,24 @@
 
 // PAGES
 @import 'pages/index';
+@import 'pages/sign-up';
 
 
-// UI
-@import 'ui/btn';
+// ATOMS
+@import 'components/layout';
+@import 'components/btn';
+
+// titles
+@import 'components/title';
+@import 'components/subtitle';
 
 // form elements
-@import 'ui/field';
-@import 'ui/label';
-@import 'ui/input';
+@import 'components/field';
+@import 'components/label';
+@import 'components/input';
+
+// ORGANISMS
+@import 'containers/header';
 
 
 

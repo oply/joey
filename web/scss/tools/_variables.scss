@@ -1,7 +1,6 @@
-// font
-$mainFont: 'Poppins', sans-serif;
-
-// breakpoints
+/**
+ * BREAKPOINTS
+ */
 $breakPointMobile: 550px;
 $breakPointTablet: 780px;
 $breakPointDesktop: 1024px;
@@ -15,8 +14,8 @@ $breakPointMaxDesktop : 1440px;
 $bodyColor: #0A175E;
 $white: #FFFFFF;
 
-// shades - base > light > lighter
-$grey-base: #E3E9F3;
+// border colors
+$dividerLight: #E3E9F3;
 
 // colors - base > light > lighter
 $blue: #3756F2;
@@ -31,7 +30,17 @@ $radiusSmall: 4px;
  * FONT
  */
 
+$mainFont: 'Poppins', sans-serif;
+
 $fwLight: 200;
 $fwRegular: 400;
+$fwMedium: 500;
 $fwBold: 600;
-$fwBolder: 900;
+$fwBolder: 800;
+
+/**
+ * LAYOUTS (widths and heights)
+ */
+
+$widthPercent: 80%;
+$widthMax: 1280px;
