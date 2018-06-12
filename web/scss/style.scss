@@ -7,10 +7,15 @@
 
 // PAGES
 @import 'pages/index';
+@import 'pages/sign-up';
 
 
 // UI
+
+// atoms
 @import 'ui/btn';
+@import 'ui/layout';
+@import 'ui/titles';
 
 // form elements
 @import 'ui/field';
