@@ -12,5 +12,15 @@
     ],
     "require": {
         "symfony/routing": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Joey\\Controller\\": "src/Controller/",
+            "Joey\\Model\\": "src/Model/",
+            "Joey\\Helper\\": "src/Helper/"
+        },
+        "files": [
+            "app/config/conf.php"
+        ]
     }
 }
