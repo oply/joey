@@ -8,14 +8,6 @@ class Sales
 {
     private $connect;
 
-    private $id;
-    private $firstName;
-    private $lastName;
-    private $phone;
-    private $pwd;
-    private $login;
-    private $mail;
-
     /**
      * Sales constructor.
      * @param $connect
@@ -27,134 +19,24 @@ class Sales
 
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function findAll()
     {
-        return $this->id;
+        $query = "SELECT
+                   id, 
+                   mail,
+                   pwd,
+                   phone,
+                   first_name,
+                   last_name   
+                 FROM 
+                   sales";
+
+        $stmt = $this->connect->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+
     }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * @param mixed $firstName
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
-    }
-
-    /**
-     * @param mixed $lastName
-     */
-    public function setLastName($lastName)
-    {
-        $this->lastName = $lastName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-    /**
-     * @param mixed $phone
-     */
-    public function setPhone($phone)
-    {
-        $this->phone = $phone;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPwd()
-    {
-        return $this->pwd;
-    }
-
-    /**
-     * @param mixed $pwd
-     */
-    public function setPwd($pwd)
-    {
-        $this->pwd = $pwd;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLogin()
-    {
-        return $this->login;
-    }
-
-    /**
-     * @param mixed $login
-     */
-    public function setLogin($login)
-    {
-        $this->login = $login;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMail()
-    {
-        return $this->mail;
-    }
-
-    /**
-     * @param mixed $mail
-     */
-    public function setMail($mail)
-    {
-        $this->mail = $mail;
-        return $this;
-    }
-
-
-
-//    public function show()
-//    {
-//        $query = "SELECT
-//
-//                 ";
-//
-//    }
 
     public function add($data)
     {
@@ -228,6 +110,5 @@ class Sales
 
         return true;
     }
-
 
 }
