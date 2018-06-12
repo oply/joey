@@ -1,0 +1,9 @@
+.title {
+    margin-bottom: .5rem;
+}
+
+.title__first {
+    @extend .title;
+    font-weight: $fwBolder;
+    font-size: 1.5rem;
+}

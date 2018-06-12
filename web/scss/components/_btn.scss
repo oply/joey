@@ -20,5 +20,13 @@
 }
 
 .btn__outer {
-	margin-bottom: .75rem;
+	margin-bottom: 1rem;
+}
+
+.btn__bottom-msg {
+	font-size: .85rem;
+
+	a {
+		font-size: inherit;
+	}
 }
