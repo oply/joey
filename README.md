@@ -10,11 +10,17 @@ We try our best to connect Joey and your daily softwares (such as Google Calenda
 
 # Get started
 
+We are using PHP for the back-end development and plain HTML / CSS / JavaScript for the front-end.
+
 ## Installation, developpement
 
-```
-Insert code here
-```
+For the back-end development, one requirement, you must at least have PHP 7.1 on your environment.
+
+Then you can run : `composer install`
+
+To install the front-end environment, simply run : `npm install`
+
+If you see some updating changes on the `package.json` or the `composer.json`, you can run `composer update` or `npm update`.
 
 ## Building
 
