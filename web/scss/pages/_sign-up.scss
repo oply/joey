@@ -3,8 +3,12 @@
         margin-bottom: 1.5rem;
         text-align: center;
     }
-}
 
-.sign-up__main {
-    width: 45%;
+    &__main {
+        width: 45%;
+    }
+
+    &__form-footer {
+        text-align: center;
+    }
 }

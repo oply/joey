@@ -1,7 +1,6 @@
-// font
-$mainFont: 'Poppins', sans-serif;
-
-// breakpoints
+/**
+ * BREAKPOINTS
+ */
 $breakPointMobile: 550px;
 $breakPointTablet: 780px;
 $breakPointDesktop: 1024px;
@@ -31,8 +30,17 @@ $radiusSmall: 4px;
  * FONT
  */
 
+$mainFont: 'Poppins', sans-serif;
+
 $fwLight: 200;
 $fwRegular: 400;
 $fwMedium: 500;
 $fwBold: 600;
 $fwBolder: 900;
+
+/**
+ * LAYOUTS (widths and heights)
+ */
+
+$widthPercent: 80%;
+$widthMax: 1280px;
