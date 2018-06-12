@@ -33,6 +33,8 @@ Your first code contribution? Start looking at `beginner` or `help wanted` issue
     * Constants are snake case `MY_SUPER_CONSTANTS`
     * Functions are camel case `mySuperFunction()`
 
+The other small coding conventions are handled by **Prettier and Eslint**.
+
 ## Contribution process
 
 * Basic understanding of Git and GitHub
