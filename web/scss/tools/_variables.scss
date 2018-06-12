@@ -1,0 +1,37 @@
+// font
+$mainFont: 'Poppins', sans-serif;
+
+// breakpoints
+$breakPointMobile: 550px;
+$breakPointTablet: 780px;
+$breakPointDesktop: 1024px;
+$breakPointMaxDesktop : 1440px;
+
+/**
+ * COLORS
+ */
+
+// body colors
+$bodyColor: #0A175E;
+$white: #FFFFFF;
+
+// shades - base > light > lighter
+$grey-base: #E3E9F3;
+
+// colors - base > light > lighter
+$blue: #3756F2;
+$blueHover: #2442DA;
+$green: #77E58A;
+$orange: #FF5722;
+
+// border radius
+$radiusSmall: 4px;
+
+/**
+ * FONT
+ */
+
+$fwLight: 200;
+$fwRegular: 400;
+$fwBold: 600;
+$fwBolder: 900;

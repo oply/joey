@@ -1,7 +1,8 @@
 // TOOLS
-@import 'tools/variable';
+@import 'tools/variables';
 @import 'tools/reset';
 @import 'tools/medias';
+@import 'tools/transitions';
 
 
 // PAGES
@@ -9,8 +10,12 @@
 
 
 // UI
-
 @import 'ui/btn';
+
+// form elements
+@import 'ui/field';
+@import 'ui/label';
+@import 'ui/input';
 
 
 

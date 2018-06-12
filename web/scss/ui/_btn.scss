@@ -3,15 +3,18 @@
 	color: $white;
 	font-size: 13px;
 	line-height: 20px;
-	font-weight: 600;
+	font-weight: $fwBold;
 	height: 54px;
 	padding: 0 120px;
-	border-radius: 4px;
+	border-radius: $radiusSmall;
 	border: none;
 	text-transform: uppercase;
+	letter-spacing: .75px;
+	transition: .3s $cubic01;
 	cursor: pointer;
 
 	&:hover {
 		background: $blueHover;
+		transition: .3s $cubic01;
 	}
 }
