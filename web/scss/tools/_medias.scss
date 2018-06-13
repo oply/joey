@@ -1,6 +1,12 @@
 /* ==========================================================================
     MIXINS
 /* ========================================================================== */
+
+$bpMobile: 550px;
+$bpTablet: 780px;
+$bpDesktopSm: 1024px;
+$bpDesktopLg : 1440px;
+
 @mixin maxWidth($breakpointValue) {
   @media only screen and (max-width: $breakpointValue) {
     @content;
