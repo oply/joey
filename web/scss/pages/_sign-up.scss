@@ -8,20 +8,25 @@
 
         &:before {
             content:'';
-            position: absolute;
             background-image: url('https://res.cloudinary.com/dj09xr9gd/image/upload/v1528876907/illu-flower.svg');
             height: 140px;
             width: 275px;
             z-index: -1;
-            top: 26px;
-            left: 50%;
-            transform: translateX(-50%);
+
+            @include minWidth($bpTablet) {
+                position: absolute;
+                top: 26px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 
     &__main {
-        width: 45%;
-        max-width: 450px;
+        @include minWidth($bpTablet) {
+            width: 45%;
+            max-width: 450px;
+        }
     }
 
     &__form-body {
@@ -33,18 +38,24 @@
         text-align: center;
     }
 
-    .bg-blue {
+    &__bg-blue {
         position: absolute;
         max-width: 50%;
         top: 0;
         right: 0;
+        z-index: -1;
     }
 
-    .bg-connect {
-        position: absolute;
-        width: 40%;
-        top: 50%;
-        right: 50%;
-        transform: translate(110%, -40%);
+    &__bg-connect {
+        display: none;
+
+        @include minWidth($bpTablet) {
+            display: block;
+            position: absolute;
+            width: 40%;
+            top: 50%;
+            right: 50%;
+            transform: translate(110%, -40%);
+        }
     }
 }

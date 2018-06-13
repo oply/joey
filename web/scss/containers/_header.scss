@@ -1,6 +1,8 @@
 .header {
-    width: $widthPercent;
-    max-width: $widthMax;
-    margin: 0 auto 6rem auto;
+    margin-bottom: 3rem;
     padding-top: 2rem;
+
+    @include minWidth($bpTablet) {
+        margin: 0 auto 6rem auto;
+    }
 }

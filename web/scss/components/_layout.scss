@@ -1,5 +1,15 @@
-.layout__container {
-    width: $widthPercent;
+.layout {
     max-width: $widthMax;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 3rem;
+
+    @include minWidth($bpTablet) {
+        width: 90%;
+    }
+    
+    @include minWidth($bpDesktopSm) {
+        width: 80%;
+    }
 }

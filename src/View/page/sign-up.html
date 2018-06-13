@@ -9,51 +9,53 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,500,600,800" rel="stylesheet">
 </head>
 <body class="sign-up">
-    <header class="header"><a href="">Oply</a></header>
+    <div class="layout">
+        <header class="header"><a href="">Oply</a></header>
 
-    <main class="layout__container">
-        <div class="sign-up__main">
-            <div class="sign-up__headtitle">
-                <h1 class="title__first">Sign up to Joey</h1>
-                <p class="subtitle">Petite catchline des familles</p>
+        <main>
+            <div class="sign-up__main">
+                <div class="sign-up__headtitle">
+                    <h1 class="title__first">Sign up to Joey</h1>
+                    <p class="subtitle">Petite catchline des familles</p>
+                </div>
+            
+                <form action="">
+                    <div class="sign-up__form-body">
+                        <div class="field">
+                            <label for="" class="label">Email address<i class="tooltip-info icon-tooltip"></i></label>
+                            <div class="input__text-icon">
+                                <span class="input__icon"><i class="icon-mail"></i></span>
+                                <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Password</label>
+                            <div class="input__text-icon">
+                                <span class="input__icon"><i class="icon-key"></i></span>
+                                <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Confirmation of password</label>
+                            <div class="input__text-icon">
+                                <span class="input__icon"><i class="icon-key"></i></span>
+                                <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="sign-up__form-footer">
+                        <div class="btn__outer">
+                            <button class="btn">Sign up now</button>
+                        </div>
+                        <p class="btn__bottom-msg">Already have an account? <a href="">Sign in here</a></a></p>
+                    </div>
+                </form>
             </div>
-        
-            <form action="">
-                <div class="sign-up__form-body">
-                    <div class="field">
-                        <label for="" class="label">Email address<i class="tooltip-info icon-tooltip"></i></label>
-                        <div class="input__text-icon">
-                            <span class="input__icon"><i class="icon-mail"></i></span>
-                            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="" class="label">Password</label>
-                        <div class="input__text-icon">
-                            <span class="input__icon"><i class="icon-key"></i></span>
-                            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="" class="label">Confirmation of password</label>
-                        <div class="input__text-icon">
-                            <span class="input__icon"><i class="icon-key"></i></span>
-                            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sign-up__form-footer">
-                    <div class="btn__outer">
-                        <button class="btn">Sign up now</button>
-                    </div>
-                    <p class="btn__bottom-msg">Already have an account? <a href="">Sign in here</a></a></p>
-                </div>
-            </form>
-        </div>
-        <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528813897/backgrounds/background-connect.svg" class="bg-blue">
-        <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528813897/illustrations/illu-connect.png" class="bg-connect">
-    </main>
+            <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528813897/backgrounds/background-connect.svg" class="sign-up__bg-blue">
+            <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528813897/illustrations/illu-connect.png" class="sign-up__bg-connect">
+        </main>
+    </div>
     
 </body>
 </html>
