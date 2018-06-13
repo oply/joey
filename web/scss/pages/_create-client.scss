@@ -2,16 +2,49 @@
     position: relative;
 
     .layout__dashboard {
-        opacity: .2;
+        opacity: .05;
+    }
+
+    .title__dashboard {
+        color: $blue;
     }
 
     &__modal {
+        position: absolute;
         width: 80%;
-        margin: 0 auto;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 10vh; // to change
+        bottom: 0;
     }
 
     &__modal-head {
+        margin-bottom: 3rem;
         text-align: center;
     }
-    
+
+    &__modal-body {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+        padding: 3rem;
+        background: $white;
+        border: 1px solid #E3E9F3;
+        border-radius: $radiusSmall;
+
+        .field {
+            width: 31%;
+        }
+    }
+
+    &__modal-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__modal-btn-outer {
+        flex: 1;
+        max-width: 300px;
+    }
 }
