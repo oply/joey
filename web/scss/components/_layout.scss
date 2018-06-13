@@ -12,10 +12,4 @@
     @include minWidth($bpDesktopSm) {
         width: 80%;
     }
-
-    &__dashboard {
-        @include minWidth($bpDesktopSm) {
-            width: 88%;
-        }
-    }
 }
