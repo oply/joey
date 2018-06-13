@@ -52,6 +52,7 @@ class Sales
                   )
                   VALUE 
                   (
+                  null,
                   :mail,
                   :pwd,
                   :phone,
