@@ -10,15 +10,20 @@
 	}
 
 	.logo {
-		font-size: 21px;
-		line-height: 27px;
-		font-weight: 300;
-		color: $textBlue;
-		margin-right: 53px;
+		display: flex;
+		align-items: center;
 
-		.icon-logo {
-			font-size: 25px;
-			margin-right: 11px;
+		img {
+			width: 50px;
+			margin-right: 10px;
+		}
+
+		p {
+			font-size: 21px;
+			line-height: 27px;
+			font-weight: 300;
+			color: $textBlue;
+			margin-right: 53px;
 		}
 	}
 
