@@ -10,19 +10,39 @@
 </head>
 
 <body class="client-list create-client">
-  <header class="header-connect">
-    <div class="info">
-      <div class="logo">
-        <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">
-        <p></i>JOEY</p> 
+  <header class="header">
+      <div class="header__inner">
+        <div class="header__lside">
+            <a href="" class="header__logo">
+                <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">
+                <span>JOEY</span> 
+            </a>
+
+            <nav class="header__nav">
+                <ul class="header__nav-inner">
+                    <li class="header__nav-el">
+                        <a href="">Client list</a>
+                    </li>
+                    <li class="header__nav-el">
+                        <a href="">Sales list</a>
+                    </li>
+                    <li class="header__nav-el">
+                        <a href="">Manage my account</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="header__rside">
+            <button class="btn btn__client"><i class="icon-add-user"></i>Add a client</button>
+            <div class="user">
+                <p class="user__name">Mr. John Doe</p>
+                <div class="user__img"></div>
+            </div>
+        </div>
       </div>
-      <button class="btn btn__client">Add a client</button>
-    </div>
-    <div class="info info-user">
-      <p class="name">Mr. John Doe</p>
-      <div class="img-user"></div>
-    </div>
   </header>
+
   <div class="layout layout__dashboard">
     <h1 class="title__dashboard">Liste clients</h1>
     <table class="table">

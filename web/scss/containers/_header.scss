@@ -1,8 +1,70 @@
 .header {
-    margin-bottom: 3rem;
-    padding-top: 2rem;
+	background: $white;
+	box-shadow: $boxShadow00;
+	padding: 20px 0;
 
-    @include minWidth($bpTablet) {
-        margin: 0 auto 6rem auto;
-    }
+	@include maxWidth($bpTablet) {
+		padding: 20px;
+	}
+
+	&__inner {
+		@extend .layout;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+	}
+
+	&__lside, &__rside {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.btn__client {
+			margin-right: 2.5rem;
+		}
+	}
+
+	// logo
+	&__logo {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		margin-right: 1.5rem;
+
+		img {
+			width: 50px;
+			margin-right: 10px;
+		}
+
+		span {
+			font-size: 21px;
+			line-height: 27px;
+			font-weight: $fwLight;
+			color: $textBlue;
+			margin-right: 15px;
+		}
+	}
+
+	// nav
+	&__nav {
+		&-inner {
+			display: flex;
+		}
+
+		&-el {
+			margin-right: 1.5rem;
+
+			a {
+				font-weight: $fwLight;
+				text-decoration: none;
+			}
+		}
+		
+	}
+
+	@include maxWidth($bpTablet) {
+		.user {
+			display: none;
+		}
+	}
 }
