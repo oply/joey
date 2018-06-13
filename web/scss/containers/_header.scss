@@ -1,6 +1,6 @@
 .header {
 	background: $white;
-	box-shadow: $boxShadow00;;
+	box-shadow: $boxShadow00;
 	padding: 20px 0;
 
 	@include maxWidth($bpTablet) {
@@ -60,13 +60,6 @@
 			}
 		}
 		
-	}
-
-	.link-header {
-		text-decoration: none;
-		white-space: nowrap;
-		margin-right: 34px;
-		font-size: 14px;
 	}
 
 	@include maxWidth($bpTablet) {
