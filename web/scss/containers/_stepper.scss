@@ -1,0 +1,56 @@
+.stepper {
+    width: 50%;
+    max-width: 250px;
+    margin: 0 auto;
+
+    &__steps {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            top: 10px;
+            background: #E3E9F3;
+            z-index: 1;
+        }
+    }
+
+    &__step {
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        z-index: 2;
+
+        &-label {
+            @extend .label;
+            max-width: 100px;
+            margin: 0 auto;
+        }
+
+        &-number {
+            display: block;
+            background: #F4F8FF;
+            width: 20px;
+            height: 20px;
+            margin: 0 auto 1rem auto;
+            font-weight: $fwLighter;
+            font-size: .75rem;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 100px;
+            border: 1px solid #E3E9F3;
+        }
+        
+        &.current &-number {
+            background: $bodyColor;
+            color: $white;
+            border: 1px solid transparent;
+        }
+    }
+}

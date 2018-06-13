@@ -1,0 +1,16 @@
+.create-client {
+    position: relative;
+
+    .layout__dashboard {
+        opacity: .2;
+    }
+
+    &__modal {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__modal-head {
+        text-align: center;
+    }
+}
