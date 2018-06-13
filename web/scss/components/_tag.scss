@@ -27,6 +27,8 @@
 
     // process
     &__process {
+        font-size: inherit;
+        
         &:before {
             content: '• ';
         }

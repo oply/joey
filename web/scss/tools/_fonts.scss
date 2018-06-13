@@ -24,8 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
+.icon-arrow-bottom:before {
+  content: "\e909";
+  color: #0a175e;
+}
 .icon-eye:before {
   content: "\e903";
   color: #0a175e;

@@ -1,11 +1,3 @@
-body {
-    background: #FAFEFF;
-}
-
-.yolo {
-    margin-bottom: 6rem;
-}
-
 .table {
     width: 100%;
     border-collapse: separate;
@@ -17,8 +9,15 @@ body {
         font-weight: 300;
         font-size: .875rem;
         text-transform: uppercase;
-        color: #bbb;
+        color: $grey;
         letter-spacing: .25px;
+
+        .icon-arrow-bottom {
+            &:before {
+                color: $grey;
+                font-size: 6px;
+            }
+        }
     }
 
     // table body
