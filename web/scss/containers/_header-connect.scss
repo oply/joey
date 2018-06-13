@@ -5,6 +5,10 @@
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
 	padding: 20px 70px;
 
+	@include maxWidth($bpTablet) {
+		padding: 20px;
+	}
+
 	.logo {
 		font-size: 21px;
 		line-height: 27px;
@@ -22,7 +26,16 @@
 		display: flex;
 		align-items: center;
 
+		@include maxWidth($bpTablet) {
+			width: 100%;
+			justify-content: space-between;
+		}
+
 		&-user { 
+
+			@include maxWidth($bpTablet) {
+				display: none;
+			}
 
 			.name {
 				font-size: 14px;
