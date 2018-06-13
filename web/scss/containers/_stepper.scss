@@ -26,6 +26,7 @@
         flex: 1;
         flex-direction: column;
         z-index: 2;
+        cursor: pointer;
 
         &-label {
             @extend .label;
@@ -45,8 +46,10 @@
             text-align: center;
             border-radius: 100px;
             border: 1px solid #E3E9F3;
+            transition: .3s $cubic01;
         }
         
+        // current
         &.current &-number {
             background: $bodyColor;
             color: $white;
@@ -55,6 +58,13 @@
 
         &.current &-label {
             font-weight: $fwMedium;
+        }
+
+        // hovered
+        &:hover &-number {
+            background: $bodyColor;
+            color: $white;
+            transition: .2s $cubic01;
         }
     }
 }
