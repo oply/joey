@@ -9,11 +9,11 @@ body {
 .table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 5px;
+    border-spacing: 0 7.5px;
 
     // table head
     &__head-cell {
-        padding: 1rem .75rem;
+        padding: .75rem;
         font-weight: 300;
         font-size: .875rem;
         text-transform: uppercase;
@@ -23,15 +23,25 @@ body {
 
     // table body
     &__body-row {
-        background: $white;
         border-radius: $radiusSmall;
         box-shadow: $boxShadow01;
     }
 
     &__body-cell {
+        background: $white;
         padding: 1.5rem .75rem;
         font-weight: 300;
         font-size: .875rem;
         text-align: center;
+
+        &:first-child {
+            border-top-left-radius: $radiusSmall;
+            border-bottom-left-radius: $radiusSmall;
+        }
+        
+        &:last-child {
+            border-top-right-radius: $radiusSmall;
+            border-bottom-right-radius: $radiusSmall;
+        }
     }
 }
