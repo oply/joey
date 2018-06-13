@@ -36,7 +36,7 @@ class Client
                    city,
                    country,
                    dob,
-                   company   
+                   company  
                  FROM 
                    client";
 
@@ -44,6 +44,36 @@ class Client
         $stmt->execute();
 
         return $stmt->fetchAll(\PDO::FETCH_OBJ);
+
+    }
+
+    public function findOne($data)
+    {
+        $query = "SELECT
+                   id, 
+                   first_name,
+                   last_name,
+                   mail,
+                   pwd,
+                   civility,
+                   phone,
+                   adress,
+                   zip,
+                   city,
+                   country,
+                   dob,
+                   company   
+                 FROM 
+                   client
+                 WHERE 
+                    id = :id  
+                   ";
+
+        $stmt = $this->connect->prepare($query);
+        $stmt->bindValue('id', $data);
+        $stmt->execute();
+
+        return $stmt->fetch(\PDO::FETCH_OBJ);
 
     }
 
@@ -84,17 +114,17 @@ class Client
                   )";
 
         $stmt = $this->connect->prepare($query);
-        $stmt->bindValue('first_name,', $data['first_name,']);
-        $stmt->bindValue('last_name,', $data['last_name,']);
-        $stmt->bindValue('mail,', $data['mail,']);
-        $stmt->bindValue('pwd,', $data['pwd,']);
-        $stmt->bindValue('civility,', $data['civility,']);
-        $stmt->bindValue('phone,',  $data['phone,']);
-        $stmt->bindValue('adress,', $data['adress,']);
-        $stmt->bindValue('zip,', $data['zip,']);
-        $stmt->bindValue('city,', $data['city,']);
-        $stmt->bindValue('country,', $data['country,']);
-        $stmt->bindValue('dob,', $data['dob,']);
+        $stmt->bindValue('first_name', $data['first_name']);
+        $stmt->bindValue('last_name', $data['last_name']);
+        $stmt->bindValue('mail', $data['mail']);
+        $stmt->bindValue('pwd', $data['pwd']);
+        $stmt->bindValue('civility', $data['civility']);
+        $stmt->bindValue('phone',  $data['phone']);
+        $stmt->bindValue('adress', $data['adress']);
+        $stmt->bindValue('zip', $data['zip']);
+        $stmt->bindValue('city', $data['city']);
+        $stmt->bindValue('country', $data['country']);
+        $stmt->bindValue('dob', $data['dob']);
         $stmt->execute();
         //        $this->errorManagement($stmt);
         return $this->connect->lastInsertId();
@@ -117,23 +147,24 @@ class Client
                   city = :city,
                   country = :country,
                   dob = :dob,
-                  company   = :company  
+                  company = :company  
                   WHERE
                     id = :id";
 
         $stmt = $this->connect->prepare($query);
         $stmt->bindValue('id', $data['id']);
-        $stmt->bindValue('first_name,', $data['first_name,'] ?? '');
-        $stmt->bindValue('last_name,', $data['last_name,'] ?? '');
-        $stmt->bindValue('mail,', $data['mail,'] ?? '');
-        $stmt->bindValue('pwd,', $data['pwd,'] ?? '');
-        $stmt->bindValue('civility,', $data['civility,'] ?? '');
-        $stmt->bindValue('phone,',  $data['phone,'] ?? '');
-        $stmt->bindValue('adress,', $data['adress,'] ?? '');
-        $stmt->bindValue('zip,', $data['zip,'] ?? '');
-        $stmt->bindValue('city,', $data['city,'] ?? '');
-        $stmt->bindValue('country,', $data['country,'] ?? '');
-        $stmt->bindValue('dob,', $data['dob,'] ?? '');
+        $stmt->bindValue('first_name', $data['first_name'] ?? '');
+        $stmt->bindValue('last_name', $data['last_name'] ?? '');
+        $stmt->bindValue('mail', $data['mail'] ?? '');
+        $stmt->bindValue('pwd', $data['pwd'] ?? '');
+        $stmt->bindValue('civility', $data['civility'] ?? '');
+        $stmt->bindValue('phone',  $data['phone'] ?? '');
+        $stmt->bindValue('adress', $data['adress'] ?? '');
+        $stmt->bindValue('zip', $data['zip'] ?? '');
+        $stmt->bindValue('city', $data['city'] ?? '');
+        $stmt->bindValue('country', $data['country'] ?? '');
+        $stmt->bindValue('dob', $data['dob'] ?? '');
+        $stmt->bindValue('company', $data['company'] ?? '');
         $stmt->execute();
 
         return true;
@@ -144,7 +175,7 @@ class Client
     {
         $query = "DELETE
                   FROM
-                  sales
+                  client
                   WHERE id = :id";
 
         $stmt = $this->connect->prepare($query);

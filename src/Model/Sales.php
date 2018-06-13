@@ -52,7 +52,6 @@ class Sales
                   )
                   VALUE 
                   (
-                  null,
                   :mail,
                   :pwd,
                   :phone,
@@ -103,7 +102,8 @@ class Sales
         $query = "DELETE
                   FROM
                   sales
-                  WHERE id = :id";
+                  WHERE 
+                  id = :id";
 
         $stmt = $this->connect->prepare($query);
         $stmt->bindValue('id', $id);

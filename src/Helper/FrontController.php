@@ -3,8 +3,8 @@
 
 namespace Joey\Helper;
 
-
-use Joey\Controller\HomeController;
+use Joey\Controller\AdminController;
+use Joey\Controller\SecurityController;
 
 class FrontController
 {
@@ -18,16 +18,35 @@ class FrontController
         $a = ltrim(rtrim($a, "/"), "/");
         try {
             switch ($a) {
-                case "home":
-                    $controller = new HomeController();
-                    $output = $controller->home();
+                case "login";
+                    $controller = new SecurityController();
+                    $controller->login();
                     break;
 
+                case "logout";
+                    $controller = new SecurityController();
+                    $controller->logout();
+                    break;
 
-//                case "delete":
-//                    $controller = new HomeController();
-//                    $output     = $controller->de();
-//                    break;
+                case "admin/home":
+                    $controller = new AdminController();
+                    $output = $controller->adminHome();
+                    break;
+
+                case "admin/client";
+                    $controller = new AdminController();
+                    $controller->adminClient();
+                    break;
+
+               case "admin/client/edit";
+                    $controller = new AdminController();
+                    $controller->adminEditClient();
+                    break;
+
+                case "admin/client/delete":
+                    $controller = new AdminController();
+                    $output     = $controller->adminDeleteClient();
+                    break;
 //
 //                case "details":
 //                    $controller = new PageController();
@@ -43,6 +62,6 @@ class FrontController
         } catch (\PDOException $e) {
             die('Erreur PDO '. $e->getMessage());
         }
-        return $output->send();
+        return $output;
     }
 }

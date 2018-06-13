@@ -45,8 +45,7 @@ class Admin
      */
     public function add($data)
     {
-        $query = /** @lang text */
-            "INSERT INTO 
+        $query = "INSERT INTO 
                   admin
                   (
                     id, 
@@ -56,7 +55,6 @@ class Admin
                   )
                   VALUE 
                   (
-                    null , 
                     :name,
                     :mail,
                     :pwd
