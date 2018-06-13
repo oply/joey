@@ -1,0 +1,41 @@
+.header-connect {
+	display: flex;
+	justify-content: space-between;
+	background: $white;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
+	padding: 20px 70px;
+
+	.logo {
+		font-size: 21px;
+		line-height: 27px;
+		font-weight: 300;
+		color: $textBlue;
+		margin-right: 53px;
+
+		.icon-logo {
+			font-size: 25px;
+			margin-right: 11px;
+		}
+	}
+
+	.info {
+		display: flex;
+		align-items: center;
+
+		&-user { 
+
+			.name {
+				font-size: 14px;
+				color: $textBlue;
+				margin-right: 30px;
+			}
+
+			.img-user {
+				border-radius: 50px;
+				height: 44px;
+				width: 44px;
+				background-color: $textBlue;
+			}
+		}
+	}
+}
