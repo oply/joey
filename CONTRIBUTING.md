@@ -30,16 +30,20 @@ Each pull request (PR) should address one issue at a time.
 
 #### Some useful conventions
 
-* Place requires and imports in the following order :
+* Place **requires and imports** in the following order :
     * External librairies such as `import React from "react"`
     * Internal tools and utils `import { color } from "const"`
     * Internal components imports `import Header from "components/organisms"`
 
-* Our naming conventions
+* Our **naming conventions** :
     * Files are kebab case `my-file.js`
     * Classes are pascal case `MyClass`
     * Constants are snake case `MY_SUPER_CONSTANTS`
     * Functions are camel case `mySuperFunction()`
+
+* Don't know how to **name your branch**?
+
+    * We love prefixes. **Please prefix your branch with the type of your change** : feature, fix, refacto, clean, doc, etc. Exemple : `feature/add-card-component`
 
 The other small coding conventions are handled by **Prettier and Eslint**.
 
