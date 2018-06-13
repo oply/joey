@@ -54,4 +54,12 @@
         flex: 1;
         max-width: 300px;
     }
+
+    &__modal-btn {
+        box-shadow: $boxShadow02;
+
+        &:hover {
+            box-shadow: $boxShadow02hover;
+        }
+    }
 }
