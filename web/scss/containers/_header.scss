@@ -58,7 +58,16 @@
 				font-weight: $fwLight;
 				text-decoration: none;
 			}
-		}
+        }
+        
+        &-el.current {
+            a {
+                font-weight: $fwMedium;
+                &:before { 
+                    content: '• ';
+                }
+            }
+        }
 		
 	}
 
