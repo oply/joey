@@ -1,4 +1,6 @@
 .btn {
+	display: flex;
+	justify-content: space-between;
 	background: $blue;
 	color: $white;
 	font-size: 13px;
@@ -6,8 +8,11 @@
 	font-weight: $fwMedium;
 	height: 54px;
 	width: 100%;
+	padding: 0 4rem;
+	line-height: 54px;
 	border-radius: $radiusSmall;
 	border: none;
+	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: .75px;
 	transition: .3s $cubic01;
@@ -16,6 +21,10 @@
 	&:hover {
 		background: $blueHover;
 		transition: .3s $cubic01;
+	}
+
+	&__inner-text {
+		color: inherit;
 	}
 }
 

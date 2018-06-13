@@ -1,0 +1,75 @@
+.create-client {
+    position: relative;
+
+    .layout__dashboard {
+        filter: blur(15px);
+    }
+
+    .title__dashboard {
+        color: $blue;
+    }
+
+    &__modal {
+        position: absolute;
+        width: 80%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 10vh; // to change
+        bottom: 0;
+    }
+
+    &__modal-head {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    &__modal-body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        padding: 3rem;
+        background: $white;
+        border: 1px solid $dividerLight;
+        border-radius: $radiusSmall;
+
+        .field {
+            width: 31%;
+            margin-bottom: 2rem;
+        }
+
+        &:after {
+            content: "";
+            width: 31%;
+        }
+    }
+
+    &__modal-body.with-divider {
+        display: flex;
+        flex-direction: column;
+
+        .field__divider {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__modal-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__modal-btn-outer {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    &__modal-btn {
+        box-shadow: $boxShadow02;
+
+        &:hover {
+            box-shadow: $boxShadow02hover;
+        }
+    }
+}

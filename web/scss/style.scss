@@ -11,6 +11,7 @@
 @import 'pages/index';
 @import 'pages/sign-up';
 @import 'pages/client-list';
+@import 'pages/create-client';
 
 
 // ATOMS
@@ -34,6 +35,8 @@
 // ORGANISMS
 @import 'containers/header';
 @import 'containers/header-connect';
+@import 'containers/stepper';
+
 
 
 
