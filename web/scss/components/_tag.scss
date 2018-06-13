@@ -1,0 +1,36 @@
+.tag {
+    // impact level tag
+    &__impact {
+        padding: .35rem 1.5rem;
+        color: #bbb;
+        border-radius: 50px;
+        border: 1px solid #bbb;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: .5px;
+
+        &.high {
+            border-color: $orange;
+            color: $orange;
+        }
+
+        &.medium {
+            border-color: $green;
+            color: $green;
+        }
+
+        &.low {
+            border-color: $blue;
+            color: $blue;
+        }
+    }
+
+    // process
+    &__process {
+        font-size: inherit;
+        
+        &:before {
+            content: '• ';
+        }
+    }
+}

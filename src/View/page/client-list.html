@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../../../web/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,900" rel="stylesheet">
 </head>
 
 <body class="client-list">
@@ -20,7 +20,45 @@
       <div class="img-user"></div>
     </div>
   </header>
-  <div class="layout">
+  <div class="layout layout__dashboard">
+    <h1 class="title__dashboard">Liste clients</h1>
+    <table class="table">
+        <tr class="table__head-row">
+            <th class="table__head-cell">Account name <i class="icon-arrow-bottom"></i></th>
+            <th class="table__head-cell">Last name <i class="icon-arrow-bottom"></i></th>
+            <th class="table__head-cell">Name <i class="icon-arrow-bottom"></i></th>
+            <th class="table__head-cell">Status <i class="icon-arrow-bottom"></i></th>
+            <th class="table__head-cell">Created at <i class="icon-arrow-bottom"></i></th>
+            <th class="table__head-cell">Office home <i class="icon-arrow-bottom"></i></th>
+            <th class="table__head-cell">Impact level <i class="icon-arrow-bottom"></i></th>
+        </tr>
+        <tr class="table__body-row">
+            <td class="table__body-cell">TF1 - Journal de midi</td>
+            <td class="table__body-cell">Pernault</td>
+            <td class="table__body-cell">Jean-Pierre</td>
+            <td class="table__body-cell">
+                <span class="tag__process color-turquoise">In process</span>
+            </td>
+            <td class="table__body-cell">01/12/2018</td>
+            <td class="table__body-cell">+337 70 67 51 73</td>
+            <td class="table__body-cell">
+              <span class="tag__impact high">High</span>
+            </td>
+        </tr>
+        <tr class="table__body-row">
+            <td class="table__body-cell">TF1 - Journal de midi</td>
+            <td class="table__body-cell">Pernault</td>
+            <td class="table__body-cell">Jean-Pierre</td>
+            <td class="table__body-cell">
+              <div class="tag__process color-orange">Validated</div>
+            </td>
+            <td class="table__body-cell">01/12/2018</td>
+            <td class="table__body-cell">+337 70 67 51 73</td>
+            <td class="table__body-cell">
+              <span class="tag__impact low">Low</span>
+            </td>
+        </tr>
+    </table>
   </div>
     
 </body>

@@ -1,0 +1,46 @@
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 7.5px;
+
+    // table head
+    &__head-cell {
+        padding: .75rem;
+        font-weight: 300;
+        font-size: .875rem;
+        text-transform: uppercase;
+        color: $grey;
+        letter-spacing: .25px;
+
+        .icon-arrow-bottom {
+            &:before {
+                color: $grey;
+                font-size: 6px;
+            }
+        }
+    }
+
+    // table body
+    &__body-row {
+        border-radius: $radiusSmall;
+        box-shadow: $boxShadow01;
+    }
+
+    &__body-cell {
+        background: $white;
+        padding: 1.5rem .75rem;
+        font-weight: 300;
+        font-size: .875rem;
+        text-align: center;
+
+        &:first-child {
+            border-top-left-radius: $radiusSmall;
+            border-bottom-left-radius: $radiusSmall;
+        }
+        
+        &:last-child {
+            border-top-right-radius: $radiusSmall;
+            border-bottom-right-radius: $radiusSmall;
+        }
+    }
+}
