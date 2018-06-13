@@ -2,7 +2,7 @@
     position: relative;
 
     .layout__dashboard {
-        opacity: .05;
+        filter: blur(15px);
     }
 
     .title__dashboard {
