@@ -31,7 +31,7 @@
         margin-bottom: 3rem;
         padding: 3rem;
         background: $white;
-        border: 1px solid #E3E9F3;
+        border: 1px solid $dividerLight;
         border-radius: $radiusSmall;
 
         .field {
@@ -42,6 +42,16 @@
         &:after {
             content: "";
             width: 31%;
+        }
+    }
+
+    &__modal-body.with-divider {
+        display: flex;
+        flex-direction: column;
+
+        .field__divider {
+            display: flex;
+            justify-content: space-between;
         }
     }
 
