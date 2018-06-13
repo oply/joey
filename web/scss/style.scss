@@ -4,6 +4,7 @@
 @import 'tools/medias';
 @import 'tools/transitions';
 @import 'tools/fonts';
+@import 'tools/classes';
 
 
 // PAGES
@@ -13,6 +14,10 @@
 
 // ATOMS
 @import 'components/layout';
+@import 'components/table';
+
+// even smaller then atoms
+@import 'components/tag';
 @import 'components/btn';
 
 // titles
