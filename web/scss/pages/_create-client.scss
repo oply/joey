@@ -27,6 +27,7 @@
     &__modal-body {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-bottom: 3rem;
         padding: 3rem;
         background: $white;
@@ -34,6 +35,12 @@
         border-radius: $radiusSmall;
 
         .field {
+            width: 31%;
+            margin-bottom: 2rem;
+        }
+
+        &:after {
+            content: "";
             width: 31%;
         }
     }
