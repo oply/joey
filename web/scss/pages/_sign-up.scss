@@ -1,18 +1,50 @@
 .sign-up {
+    position: relative; 
+
     &__headtitle {
         margin-bottom: 2.5rem;
         text-align: center;
+        position: relative;
+
+        &:before {
+            content:'';
+            position: absolute;
+            background-image: url('https://res.cloudinary.com/dj09xr9gd/image/upload/v1528876907/illu-flower.svg');
+            height: 140px;
+            width: 275px;
+            z-index: -1;
+            top: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     &__main {
         width: 45%;
+        max-width: 450px;
     }
 
     &__form-body {
         margin-bottom: 3rem;
+        z-index: 2;
     }
 
     &__form-footer {
         text-align: center;
+    }
+
+    .bg-blue {
+        position: absolute;
+        max-width: 50%;
+        top: 0;
+        right: 0;
+    }
+
+    .bg-connect {
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        right: 50%;
+        transform: translate(110%, -40%);
     }
 }
