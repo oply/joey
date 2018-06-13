@@ -38,9 +38,15 @@ class Admin
 
     }
 
+    /**
+     * @param $data
+     *
+     * @return string
+     */
     public function add($data)
     {
-        $query = "INSERT INTO 
+        $query = /** @lang text */
+            "INSERT INTO 
                   admin
                   (
                     id, 

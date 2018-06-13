@@ -4,6 +4,8 @@
 namespace Joey\Model;
 
 
+use Joey\Helper\Connect;
+
 class Client
 {
     private $connect;

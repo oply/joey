@@ -11,8 +11,7 @@ class HomeController extends BaseController
     public function home()
     {
 
-        $sales = new Sales();
-        $result = $sales->add();
+
 //        dump($result);
 //        die;
 
