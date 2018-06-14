@@ -22,12 +22,6 @@ To install the front-end environment, simply run : `npm install`
 
 If you see some updating changes on the `package.json` or the `composer.json`, you can run `composer update` or `npm update`.
 
-## Building
-
-```
-Insert code here
-```
-
 ## Contributing to Joey
 
 ### Contributing guide
