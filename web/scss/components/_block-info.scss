@@ -12,30 +12,39 @@
 	background: $white;
 	border: 1px solid #E3E9F3;
 	border-radius: 2px;
-	height: 235px;
+	min-height: 235px;
 	width: 100%;
 
-	.info__containTitle {
+	&__head {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid #E3E9F3;
-		padding: 0 24px 0 34px;
+		padding: 0 24px;
 
 		.icon {
 			cursor: pointer;
 		}
 	}
 
+	&__main {
+		padding: 1.5rem 2rem;
+	}
+
 	.info__text {
 		display: flex;
 		align-items: center;
-		padding: 0 24px 0 34px;
 		margin-bottom: 14px;
 
 		p {
-			font-size: 16px;
-			margin-left: 12px;
+			// margin-left: 12px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		span[class^="icon"] {
+			margin-right: 12px;
 		}
 
 		.icon-mail {
@@ -49,10 +58,12 @@
 		.icon-phone {
 			font-size: 19px;
 		}
+	}
 
-		&.first {
-			margin-top: 20px;
-		}
+	.info__text--singleLine {
+		@extend .info__text;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	.info__data {

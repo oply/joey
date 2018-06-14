@@ -1,17 +1,18 @@
 .client-card {
 	background: $bgBlue;
 
-	.contain-title {
+	&__headtitle {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
 
-		.info-card {
-
-			p, a {
-				font-size: 10px;
-				text-align: right;
-			}
+	&__side-infos {
+		line-height: 1.5;
+		p,
+		a {
+			font-size: .85rem;
+			text-align: right;
 		}
 	}
 }
