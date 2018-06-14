@@ -4,7 +4,6 @@
   position: relative;
   display: inline-block;
   user-select: none;
-  margin: 10px;
 }
 
 .custom-select-wrapper select {
@@ -15,8 +14,7 @@
   position: relative;
   display: inline-block;
   min-width: 150px;
-  width: 200px;
-  max-width: 300px;
+  width: 100%;
   height: 50px;
 }
 
@@ -25,15 +23,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 150px;
-  padding: 0 1.5rem 0 22px;
-  // font-weight: $fwLight;
-  line-height: 50px;
-  background: #FFF;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: .85rem;
+  background: $white;
   border-radius: $radiusSmall;
   cursor: pointer;
-  height: 50px;
   border: 1px solid $dividerLight;
+
+  span {
+    font-size: inherit;
+  }
 }
 
 .custom-options {
@@ -42,19 +42,17 @@
   top: 100%;
   left: 0;
   right: 0;
-  min-width: 100%;
+  width: 100%;
   margin: 15px 0;
   border: 1px solid $dividerLight;
   border-radius: $radiusSmall;
   box-sizing: border-box;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, .07);
   background: $white;
   transition: .15s $cubic01;
-  margin-top: 25px;
+  margin-top: 18px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(-15px);
   max-height: 200px;
   overflow: auto;
 }
