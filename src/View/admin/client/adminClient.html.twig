@@ -1,0 +1,51 @@
+{% extends "./index.html.twig" %}
+{% block body %}
+    {% for client in clients %}
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>fist_name</th>
+                    <th>last_name</th>
+                    <th>mail</th>
+                    <th>pwd</th>
+                    <th>civilty</th>
+                    <th>phone</th>
+                    <th>adress</th>
+                    <th>zip</th>
+                    <th>city</th>
+                    <th>country</th>
+                    <th>dob</th>
+                    <th>company</th>
+                    <th>id_sales</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ client.id }}</td>
+                    <td>{{ client.fist_name }}</td>
+                    <td>{{ client.last_name }}</td>
+                    <td>{{ client.mail }}</td>
+                    <td>{{ client.pwd }}</td>
+                    <td>{{ client.civilty }}</td>
+                    <td>{{ client.phone }}</td>
+                    <td>{{ client.adress }}</td>
+                    <td>{{ client.zip }}</td>
+                    <td>{{ client.city }}</td>
+                    <td>{{ client.country }}</td>
+                    <td>{{ client.dob }}</td>
+                    <td>{{ client.company }}</td>
+                    {% if client.id_sales is null %}
+                        <td>nill</td>
+                        {% else %}
+                            <td>{{ client.id_sales }}</td>
+                    {% endif %}
+                    <td><a href="?a=admin/client/edit&id={{ client.id }}">edit</a></td>
+                    <td><a href="?a=admin/client/delete&id={{ client.id }}">delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    {% endfor %}
+{% endblock %}

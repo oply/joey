@@ -1,0 +1,73 @@
+{% extends "./index.html.twig" %}
+{% block body %}
+    <form action="" method="post">
+
+        <div>
+            <input type="hidden" name="id" value="{{ client.id }}">
+        </div>
+        <div>
+            <label for="">Prénom</label>
+            <input type="text" name="first_name" value="{{ client.first_name }}">
+        </div>
+        <div>
+            <label for="">Nom</label>
+            <input type="text" name="last_name" value="{{ client.last_name }}">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="mail" value="{{ client.mail }}">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="text" name="pwd" value="{{ client.pwd }}">
+        </div>
+        <div>
+            <label for="">Civilité</label>
+            <input type="checkbox" name="civility" value="{{ client.civility }}">
+        </div>
+        <div>
+            <label for="">Téléphone</label>
+            <input type="text" name="phone" value="{{ client.phone }}">
+        </div>
+        <div>
+            <label for="">Adresse</label>
+            <input type="text" name="adress" value="{{ client.adress }}">
+        </div>
+        <div>
+            <label for="">Code postale</label>
+            <input type="text" name="zip" value="{{ client.zip }}">
+        </div>
+        <div>
+            <label for="">Ville</label>
+            <input type="text" name="city" value="{{ client.city }}">
+        </div>
+        <div>
+            <label for="">Pays</label>
+            <input type="text" name="country" value="{{ client.country }}">
+        </div>
+        <div>
+            <label for="">Date d'anniversaire</label>
+            <input type="date" name="dob" value="{{ client.dob }}" >
+        </div>
+        <div>
+            <label for="">Société</label>
+            <input type="text" name="company" value="{{ client.company }}">
+        </div>
+        <div>
+            <label for="">Pays</label>
+            <input type="text" name="country" value="{{ client.country }}">
+        </div>
+        <div>
+            <label for="">ID_Commercial</label>
+            <select name="civility">
+                <option value="Star Wars">Star Wars</option>
+                <option value="Star Trek">Star Trek</option>
+                <option value="Harry Potter">Harry Potter</option>
+                <option value="Lord of the Rings">Lord of the Rings</option>
+                <option value="Game of Thrones">Game of Thrones</option>
+            </select>
+        </div>
+        <input type="submit" name="submit" value="Valider">
+        <a href="?a=admin/client/delete&id={{ client.id }}">delete</a>
+    </form>
+{% endblock %}

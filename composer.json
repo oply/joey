@@ -1,7 +1,6 @@
 {
     "name": "vendor/joey",
     "require-dev": {
-        "symfony/var-dumper": "^4.1"
     },
     "license": "MIT",
     "authors": [
@@ -11,6 +10,19 @@
         }
     ],
     "require": {
-        "symfony/routing": "^4.1"
+        "symfony/var-dumper": "^4.1",
+        "twig/twig": "^2.4",
+        "symfony/routing": "^4.1",
+        "symfony/http-foundation": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Joey\\Controller\\": "src/Controller/",
+            "Joey\\Model\\": "src/Model/",
+            "Joey\\Helper\\": "src/Helper/"
+        },
+        "files": [
+            "app/config/conf.php"
+        ]
     }
 }
