@@ -1,7 +1,7 @@
-const custom_select = document.querySelector("select.custom-select");
-const custom_select_wrapper = document.querySelector("div.custom-select");
-const custom_select_trigger = document.querySelector(".custom-select-trigger");
-const custom_options = document.querySelectorAll(".custom-option");
+const custom_select = document.querySelector("select.custom-select"),
+  custom_select_wrapper = document.querySelector("div.custom-select"),
+  custom_select_trigger = document.querySelector(".custom-select-trigger"),
+  custom_options = document.querySelectorAll(".custom-option");
 
 for (var i = 0; i < custom_options.length; i++) {
   const option = custom_options[i];
