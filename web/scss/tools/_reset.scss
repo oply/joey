@@ -51,3 +51,15 @@ strong {
   font-weight: 700;
 }
 
+a {
+  transition: .3s $cubic01;
+  &:hover {
+    opacity: .8;
+    transition: .3s $cubic01;
+  }
+}
+
+b {
+  font-weight: $fwBold;
+}
+
