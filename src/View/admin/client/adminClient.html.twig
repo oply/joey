@@ -1,51 +1,163 @@
-{% extends "./index.html.twig" %}
+{% extends "../index.html.twig" %}
+{#{% set  %}#}
 {% block body %}
-    {% for client in clients %}
-        <table>
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>fist_name</th>
-                    <th>last_name</th>
-                    <th>mail</th>
-                    <th>pwd</th>
-                    <th>civilty</th>
-                    <th>phone</th>
-                    <th>adress</th>
-                    <th>zip</th>
-                    <th>city</th>
-                    <th>country</th>
-                    <th>dob</th>
-                    <th>company</th>
-                    <th>id_sales</th>
-                    <th>edit</th>
-                    <th>delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ client.id }}</td>
-                    <td>{{ client.fist_name }}</td>
-                    <td>{{ client.last_name }}</td>
-                    <td>{{ client.mail }}</td>
-                    <td>{{ client.pwd }}</td>
-                    <td>{{ client.civilty }}</td>
-                    <td>{{ client.phone }}</td>
-                    <td>{{ client.adress }}</td>
-                    <td>{{ client.zip }}</td>
-                    <td>{{ client.city }}</td>
-                    <td>{{ client.country }}</td>
-                    <td>{{ client.dob }}</td>
-                    <td>{{ client.company }}</td>
-                    {% if client.id_sales is null %}
-                        <td>nill</td>
-                        {% else %}
-                            <td>{{ client.id_sales }}</td>
-                    {% endif %}
-                    <td><a href="?a=admin/client/edit&id={{ client.id }}">edit</a></td>
-                    <td><a href="?a=admin/client/delete&id={{ client.id }}">delete</a></td>
-                </tr>
-            </tbody>
+    <a href="/?a=admin/sales/add">ajoute</a>
+    {#<header class="header">#}
+        {#<div class="header__inner">#}
+            {#<div class="header__lside">#}
+                {#<a href="" class="header__logo">#}
+                    {#<img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">#}
+                    {#<span>JOEY</span>#}
+                {#</a>#}
+
+                {#<nav class="header__nav">#}
+                    {#<ul class="header__nav-inner">#}
+                        {#<li class="header__nav-el">#}
+                            {#<a href="">Client list</a>#}
+                        {#</li>#}
+                        {#<li class="header__nav-el">#}
+                            {#<a href="">Sales list</a>#}
+                        {#</li>#}
+                        {#<li class="header__nav-el">#}
+                            {#<a href="">Manage my account</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</nav>#}
+
+            {#</div>#}
+            {#<div class="header__rside">#}
+                {#<button class="btn btn__client">#}
+                    {#<i class="icon-add-user"></i>Add a client</button>#}
+                {#<div class="user">#}
+                    {#<p class="user__name">Mr. John Doe</p>#}
+                    {#<div class="user__img"></div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</header>#}
+    <div class="layout layout__dashboard">
+        <h1 class="title__dashboard">Client list</h1>
+        <table class="table">
+            <tr class="table__head-row">
+                <th>
+                    <div class="table__head-cell current">
+                        Account name
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Last name
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Name
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Status
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Created at
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Office home
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th> <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+            </tr>
+            {% for client in clients  %}
+
+            <tr class="table__body-row">
+                <td class="table__body-cell">{{ client.company }}</td>
+                <td class="table__body-cell">{{ client.last_name }}</td>
+                <td class="table__body-cell">{{ client.first_name }}</td>
+                <td class="table__body-cell">
+                    <span class="tag__process color-turquoise">In process</span>
+                </td><td class="table__body-cell">01/12/2018</td>
+                <td class="table__body-cell">{{ client.phone }}</td>
+                <td class="table__body-cell">
+                    <span class="tag__impact high">{{ client.adress }}</span>
+                </td>
+                <td class="table__body-cell">{{ client.adress }}</td>
+                <td class="table__body-cell">{{ client.zip }}</td>
+                <td class="table__body-cell">{{ client.city }}</td>
+                <td class="table__body-cell">{{ client.country }}</td>
+                <td class="table__body-cell">{{ client.dob }}</td>
+                <td class="table__body-cell">{{ client.company }}</td>
+                {% if client.id_sales is null %}
+                    <td>null</td>
+                {% else %}
+                    <td>{{ client.id_sales }}</td>
+                {% endif %}
+                <td><a href="?a=admin/client/edit&id={{ client.id }}">edit</a></td>
+                <td><a href="?a=admin/client/delete&id={{ client.id }}">delete</a></td>
+
+            </tr>
+            {% endfor %}
         </table>
-    {% endfor %}
+    </div>
 {% endblock %}

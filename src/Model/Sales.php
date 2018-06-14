@@ -71,6 +71,23 @@ class Sales
 
     }
 
+    public function register($data)
+    {
+        $query = "UPDATE
+                    sales
+                  SET
+                    pwd = :pwd
+                  WHERE
+                    mail = :mail";
+
+        $stmt = $this->connect->prepare($query);
+        $stmt->bindValue('mail', $data['mail'] ?? '');
+        $stmt->bindValue('pwd', $data['pwd'] ?? '');
+        $stmt->execute();
+
+        return true;
+
+    }
     public function update($data)
     {
         $query = "UPDATE

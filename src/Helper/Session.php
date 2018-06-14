@@ -20,22 +20,6 @@ class Session
 
 
     /**
-     * @return bool
-     */
-        public static function isSessionState()
-    {
-        $self = new self();
-        return $self;
-        if ($self->sessionState)
-        {
-            dump(isset($self->sessionState));
-            return isset($self->sessionState);
-        }
-    }
-
-
-
-    /**
      *    Returns THE instance of 'Session'.
      *    The session is automatically initialized if it wasn't.
      *

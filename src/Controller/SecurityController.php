@@ -5,6 +5,7 @@ namespace Joey\Controller;
 use Joey\Helper\BaseController;
 use Joey\Helper\Connect;
 use Joey\Helper\Session;
+use Joey\Model\Sales;
 
 class SecurityController extends BaseController
 {
@@ -12,34 +13,78 @@ class SecurityController extends BaseController
     private $id;
     private $mail;
     private $pwd;
-
+    private $role;
+    private $session;
     private $bdd;
+    private $sales;
+
     public function __construct()
     {
         parent::__construct();
         $this->bdd = Connect::getConnect();
+        $this->sales = new Sales();
 
     }
-    public function login(){
+
+    public function signIn()
+    {
         if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['connexion_bouton'] = 'Se Connecter'){
            $verif = $this->verif($_POST);
+
+
            if ($verif){
                $this->session();
-               header('Location: ./?a=admin/home');
-               exit();
+
+               if($this->session->role == 'sales'){
+                   header('Location: ./?a=sales/client');
+                   exit();
+               }elseif ($this->session->role == 'client'){
+                   header('Location: ./?a=sales/client');
+                   exit();
+               }elseif ($this->session->role == 'admin'){
+                   header('Location: ./?a=admin/home');
+                   exit();
+               }
+
+
 
            }else{
-               return "Le mail est inexistant ou Mot de passe incorrect";
+               $error = "Le mail est inexistant ou Mot de passe incorrect";
+
            }
 
         }
-        echo self::$twig->render("login.html.twig");
+        echo self::$twig->render("sign-in.html.twig", [
+            'error' => $error
+        ]);
     }
 
-    public function logout(){
+    public function signUp()
+    {
+        if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['sign-up-button'] = 'Sign up'){
+            $verif = $this->verifSalesRegister($_POST);
+
+            if ($verif != false) {
+                $this->sales->register($_POST);
+
+                header('Location: ./?a=sign-in');
+                exit();
+
+            }else{
+                $error = "Le mail est inexistant ou Mot de passe incorrect";
+
+            }
+
+        }
+        echo self::$twig->render("sales/sign-up.html.twig", [
+            'error' => $error
+        ]);
+    }
+
+    public function signOut(){
         $session = Session::getInstance();
         $session->destroy();
-        header('Location: ./?a=login');
+        header('Location: ./?a=sign-in');
         exit();
 
     }
@@ -49,7 +94,8 @@ class SecurityController extends BaseController
         $sql = "SELECT
                   id,
                  mail,
-                 pwd
+                 pwd,
+                 role
                  FROM
                  admin
                  WHERE
@@ -70,7 +116,8 @@ class SecurityController extends BaseController
         $sql = "SELECT
                   id,
                  mail,
-                 pwd
+                 pwd,
+                 role
                  FROM
                  sales
                  WHERE
@@ -87,12 +134,35 @@ class SecurityController extends BaseController
 
 
     }
+    public function verifSalesRegister($data)
+    {
+        $sql = "SELECT
+                  id,
+                 mail,
+                 pwd,
+                 role
+                 FROM
+                 sales
+                 WHERE
+                 mail = :mail 
+                 ";
+
+        $requete = $this->bdd->prepare($sql);
+        $requete->bindValue('mail', $data['mail']);
+        $requete->execute();
+
+
+        return $requete->fetch();
+
+
+    }
     public function verifClient($data)
     {
         $sql = "SELECT
                   id,
                  mail,
-                 pwd
+                 pwd,
+                 role
                  FROM
                  client
                  WHERE
@@ -116,6 +186,7 @@ class SecurityController extends BaseController
             $this->setId($reponse['id']);
             $this->setPwd($reponse['pwd']);
             $this->setMail($reponse['mail']);
+            $this->setRole($reponse['role']);
             return 1;
         }else{
             $reponse = $this->verifSales($data);
@@ -123,6 +194,7 @@ class SecurityController extends BaseController
                 $this->setId($reponse['id']);
                 $this->setPwd($reponse['pwd']);
                 $this->setMail($reponse['mail']);
+                $this->setRole($reponse['role']);
                 return 1;
 
             }else{
@@ -131,6 +203,7 @@ class SecurityController extends BaseController
                     $this->setId($reponse['id']);
                     $this->setPwd($reponse['pwd']);
                     $this->setMail($reponse['mail']);
+                    $this->setRole($reponse['role']);
                     return 1;
 
                 }else{
@@ -144,11 +217,10 @@ class SecurityController extends BaseController
     public function session()
     {
 
-        $session = Session::getInstance();
-        $session->id = $this->getId();
-        $session->mail = $this->getMail();
-//        $_SESSION['id'] = $this->getId();
-//        $_SESSION['mail'] = $this->getMail();
+       $this->session = Session::getInstance();
+        $this->session->id = $this->getId();
+        $this->session->mail = $this->getMail();
+        $this->session->role = $this->getRole();
 
 //        return 1;
     }
@@ -199,4 +271,24 @@ class SecurityController extends BaseController
         $this->pwd = $pwd;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param mixed $role
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
+        return $this;
+    }
+
+
+
 }

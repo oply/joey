@@ -36,6 +36,9 @@ class Client
                    city,
                    country,
                    dob,
+                   date_create,
+                   status,
+                   property,
                    company  
                  FROM 
                    client";
@@ -46,7 +49,6 @@ class Client
         return $stmt->fetchAll(\PDO::FETCH_OBJ);
 
     }
-
     public function findOne($data)
     {
         $query = "SELECT
@@ -76,7 +78,6 @@ class Client
         return $stmt->fetch(\PDO::FETCH_OBJ);
 
     }
-
     public function add($data)
     {
         $query = "INSERT INTO 
@@ -94,6 +95,9 @@ class Client
                     city,
                     country,
                     dob,
+                    date_create,
+                    status,
+                    property,
                     company   
                   )
                   VALUE 
@@ -109,7 +113,9 @@ class Client
                     :zip,
                     :city,
                     :country,
-                    :dob,
+                    :date_create,
+                    :statut,
+                    :property,
                     :company   
                   )";
 
@@ -125,14 +131,15 @@ class Client
         $stmt->bindValue('city', $data['city']);
         $stmt->bindValue('country', $data['country']);
         $stmt->bindValue('dob', $data['dob']);
+        $stmt->bindValue('statut', $data['statut']);
+        $stmt->bindValue('property', $data['property']);
+        $stmt->bindValue('date_create', new \DateTime('NOW'));
         $stmt->execute();
-        dump($stmt->execute());
-        dump($stmt);
+        $stmt->execute();
         //        $this->errorManagement($stmt);
         return $this->connect->lastInsertId();
 
     }
-
     public function update($data)
     {
         $query = "UPDATE
@@ -148,6 +155,8 @@ class Client
                   zip = :zip,
                   city = :city,
                   country = :country,
+                  status = :statut,
+                  property = :property,
                   dob = :dob,
                   company = :company  
                   WHERE
@@ -167,12 +176,12 @@ class Client
         $stmt->bindValue('country', $data['country'] ?? '');
         $stmt->bindValue('dob', $data['dob'] ?? '');
         $stmt->bindValue('company', $data['company'] ?? '');
+        $stmt->bindValue('property', $data['property'] ?? '');
+        $stmt->bindValue('statut', $data['statut'] ?? '');
         $stmt->execute();
 
         return true;
     }
-
-
     public function delete($id)
     {
         $query = "DELETE
@@ -185,5 +194,28 @@ class Client
         $stmt->execute();
 
         return true;
+    }
+
+    public function findClientBySalse($id){
+        $query = "SELECT 
+                    client.first_name, 
+                    client.last_name, 
+                    client.phone, 
+                    client.company, 
+                    client.date_create, 
+                    client.status, 
+                    client.property 
+                  FROM 
+                    client 
+                  JOIN 
+                    sales s ON client.id_sales = s.id 
+                  WHERE 
+                    s.id = :id";
+        $stmt = $this->connect->prepare($query);
+        $stmt->bindValue('id', $id);
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+
     }
 }

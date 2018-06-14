@@ -4,6 +4,7 @@
 namespace Joey\Helper;
 
 use Joey\Controller\admin\AdminController;
+use Joey\Controller\SalesController;
 use Joey\Controller\SecurityController;
 
 class FrontController
@@ -18,14 +19,19 @@ class FrontController
         $a = ltrim(rtrim($a, "/"), "/");
         try {
             switch ($a) {
-                case "login";
+                case "sign-in";
                     $controller = new SecurityController();
-                    $output     = $controller->login();
+                    $output     = $controller->signIn();
                     break;
 
-                case "logout";
+                case "sign-out";
                     $controller = new SecurityController();
-                    $output     = $controller->logout();
+                    $output     = $controller->signOut();
+                    break;
+
+                case "sign-up";
+                    $controller = new SecurityController();
+                    $output     = $controller->signUp();
                     break;
 
                 case "admin/home":
@@ -52,7 +58,16 @@ class FrontController
                     $controller = new AdminController();
                     $output     = $controller->adminDeleteClient();
                     break;
-//
+
+
+                case "sales/client";
+                    $controller = new SalesController();
+                    $output     = $controller->salesClient();
+                    break;
+
+//                case "admin/sales";
+//                    $controller = new AdminController();
+//                    $output     = $controller->
 //                case "details":
 //                    $controller = new PageController();
 //                    $output = $controller->adminDetails();

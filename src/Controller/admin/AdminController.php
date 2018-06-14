@@ -22,13 +22,12 @@ class AdminController extends BaseController
         parent::__construct();
         $this->admin  = new Admin();
         $this->client = new Client();
-//        if(!Session::isSessionState()){
-//
-//        $this->session = Session::getInstance();
-//        }
-//        dump($this->session);
-//        dump(Session::isSessionState());
-//        die;
+        $this->session = Session::getInstance();
+        if($this->session->id == null){
+            $this->session->destroy();
+            header('Location: ./?a=sign-in');
+            exit();
+        }
 
     }
 
