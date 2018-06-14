@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../web/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,800" rel="stylesheet">
+</head>
+
+<body class="client-list create-client">
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__lside">
+                <a href="" class="header__logo">
+                    <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">
+                    <span>JOEY</span>
+                </a>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-inner">
+                        <li class="header__nav-el current">
+                            <a href="">Client list</a>
+                        </li>
+                        <li class="header__nav-el">
+                            <a href="">Sales list</a>
+                        </li>
+                        <li class="header__nav-el">
+                            <a href="">Manage my account</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="header__rside">
+                <button class="btn btn__client">
+                    <i class="icon-add-user"></i>Add a client</button>
+                <div class="user">
+                    <p class="user__name">Mr. John Doe</p>
+                    <div class="user__img"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout layout__dashboard">
+        <h1 class="title__dashboard">Liste clients</h1>
+        <table class="table">
+            <tr class="table__head-row">
+                <th class="table__head-cell">Account name
+                    <i class="icon-arrow-bottom"></i>
+                </th>
+                <th class="table__head-cell">Last name
+                    <i class="icon-arrow-bottom"></i>
+                </th>
+                <th class="table__head-cell">Name
+                    <i class="icon-arrow-bottom"></i>
+                </th>
+                <th class="table__head-cell">Status
+                    <i class="icon-arrow-bottom"></i>
+                </th>
+                <th class="table__head-cell">Created at
+                    <i class="icon-arrow-bottom"></i>
+                </th>
+                <th class="table__head-cell">Office home
+                    <i class="icon-arrow-bottom"></i>
+                </th>
+                <th class="table__head-cell">Impact level
+                    <i class="icon-arrow-bottom"></i>
+                </th>
+            </tr>
+            <tr class="table__body-row">
+                <td class="table__body-cell">TF1 - Journal de midi</td>
+                <td class="table__body-cell">Pernault</td>
+                <td class="table__body-cell">Jean-Pierre</td>
+                <td class="table__body-cell">
+                    <span class="tag__process color-turquoise">In process</span>
+                </td>
+                <td class="table__body-cell">01/12/2018</td>
+                <td class="table__body-cell">+337 70 67 51 73</td>
+                <td class="table__body-cell">
+                    <span class="tag__impact high">High</span>
+                </td>
+            </tr>
+            <tr class="table__body-row">
+                <td class="table__body-cell">TF1 - Journal de midi</td>
+                <td class="table__body-cell">Pernault</td>
+                <td class="table__body-cell">Jean-Pierre</td>
+                <td class="table__body-cell">
+                    <div class="tag__process color-orange">Validated</div>
+                </td>
+                <td class="table__body-cell">01/12/2018</td>
+                <td class="table__body-cell">+337 70 67 51 73</td>
+                <td class="table__body-cell">
+                    <span class="tag__impact low">Low</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="create-client__modal">
+        <div class="modal__head">
+            <h1 class="title__dashboard">Create a new client</h1>
+            <div class="stepper">
+                <div class="stepper__steps">
+                    <div class="stepper__step current">
+                        <span class="stepper__step-number">1</span>
+                        <span class="stepper__step-label">Personal informations</span>
+                    </div>
+                    <div class="stepper__step">
+                        <span class="stepper__step-number">2</span>
+                        <span class="stepper__step-label">Client company informations</span>
+                    </div>
+                    <div class="stepper__step">
+                        <span class="stepper__step-number">3</span>
+                        <span class="stepper__step-label">Process</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__main">
+            <!-- step 1 -->
+            <div class="create-client__modal-step">
+                <div class="field">
+                    <label for="" class="label">Civility</label>
+                    <div class="input__text-icon">
+                        <span class="input__icon">
+                            <i class="icon-mail"></i>
+                        </span>
+                        <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">First name</label>
+                    <div class="input__text-icon">
+                        <span class="input__icon">
+                            <i class="icon-mail"></i>
+                        </span>
+                        <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Last name</label>
+                    <div class="input__text-icon">
+                        <span class="input__icon">
+                            <i class="icon-mail"></i>
+                        </span>
+                        <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Email</label>
+                    <div class="input__text-icon">
+                        <span class="input__icon">
+                            <i class="icon-mail"></i>
+                        </span>
+                        <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Phone</label>
+                    <div class="input__text-icon">
+                        <span class="input__icon">
+                            <i class="icon-mail"></i>
+                        </span>
+                        <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                    </div>
+                </div>
+            </div>
+            <!-- step 2 -->
+            <div class="create-client__modal-step with-divider">
+                <div class="field__divider">
+                    <div class="field">
+                        <label for="" class="label">Company name</label>
+                        <div class="input__text-icon">
+                            <span class="input__icon">
+                                <i class="icon-mail"></i>
+                            </span>
+                            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                        </div>
+                    </div>
+                </div>
+                <div class="field__divider">
+                    <div class="field">
+                        <label for="" class="label">Company address</label>
+                        <div class="input__text-icon">
+                            <span class="input__icon">
+                                <i class="icon-mail"></i>
+                            </span>
+                            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Company zipcode</label>
+                        <div class="input__text-icon">
+                            <span class="input__icon">
+                                <i class="icon-mail"></i>
+                            </span>
+                            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Company city</label>
+                        <div class="input__text-icon">
+                            <span class="input__icon">
+                                <i class="icon-mail"></i>
+                            </span>
+                            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="create-client__modal-step success">
+                <h2 class="modal__main-title">All done!</h2>
+                <p>The client
+                    <b>Alison Charrier</b> has been created with success.</p>
+                <a href="">Check his customer card now</a>
+            </div>
+        </div>
+        <div class="create-client__modal-footer">
+            <div class="create-client__modal-btn-outer">
+                <button class="btn create-client__modal-btn">
+                    <span class="btn__inner-text">1 / 3</span>
+                    <span class="btn__inner-text">Étape suivante</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

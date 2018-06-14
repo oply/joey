@@ -1,8 +1,8 @@
 // TOOLS
 @import 'tools/variables';
+@import 'tools/transitions';
 @import 'tools/reset';
 @import 'tools/medias';
-@import 'tools/transitions';
 @import 'tools/fonts';
 @import 'tools/classes';
 
@@ -11,7 +11,7 @@
 @import 'pages/index';
 @import 'pages/sign-up';
 @import 'pages/client-list';
-@import 'pages/create-client';
+@import 'pages/client-create';
 
 
 // ATOMS
@@ -38,6 +38,7 @@
 @import 'containers/header';
 @import 'containers/header-connect';
 @import 'containers/stepper';
+@import 'containers/modal';
 
 
 
