@@ -60,11 +60,11 @@
       </div>
     </div>
 
-    <div class="client-card__block-container yo client-card__block-container">
+    <div class="client-card__block-container client-card__block-container">
       <div class="block-info">
         <div class="block-info__head">
           <h2 class="title__blockInfo">Account information</h2>
-          <a class="icon icon-edit"></a>
+          <a class="icon icon-edit open-edit"></a>
         </div>
         <div class="block-info__main">
           <div class="block-info__content">
@@ -89,7 +89,7 @@
       <div class="block-info">
         <div class="block-info__head">
           <h2 class="title__blockInfo">Process</h2>
-          <a class="icon icon-edit"></a>
+          <a class="icon icon-edit open-process"></a>
         </div>
         <div class="block-info__main">
           <div class="block-info__content--singleLine">
@@ -111,7 +111,7 @@
       <div class="block-info">
         <div class="block-info__head">
           <h2 class="title__blockInfo">Complementary infos</h2>
-          <a class="icon icon-edit"></a>
+          <a class="icon icon-edit open-complementary"></a>
         </div>
         <div class="block-info__main">
           <div class="block-info__content--singleLine">
@@ -140,12 +140,12 @@
   </div>
 
   <!-- CREATE POPIN ACCOUNT INFORMATION -->
-  <div class="create-client__modal edit__accountInformation" style="display:none;">
+  <div class="create-client__modal edit__accountInformation modal-custom">
     <div class="modal__head">
       <h1 class="title__dashboard popin">Modify : Account information</h1>
     </div>
     <div class="modal__main">
-      <div class="create-client__modal-step with-divider">
+      <div class="create-client__modal-contain with-divider">
         <div class="field__divider">
           <div class="field">
             <label for="" class="label">Civility</label>
@@ -210,19 +210,25 @@
     </div>
     <div class="create-client__modal-footer">
       <div class="create-client__modal-btn-outer">
+        <button class="btn create-client__modal-btn cancel">
+          <span class="btn__inner-text cancel">Cancel</span>
+        </button>
+      </div>
+      <div class="create-client__modal-btn-outer">
         <button class="btn create-client__modal-btn">
           <span class="btn__inner-text change">Validate the change</span>
         </button>
       </div>
     </div>
   </div>
+
   <!-- CREATE POPIN MODIFY COMPLEMENTARY -->
-  <div class="create-client__modal edit__complementaryInfos" style="display:none">
+  <div class="create-client__modal edit__complementaryInfos modal-custom">
     <div class="modal__head">
       <h1 class="title__dashboard popin">Modify : Complementary infos</h1>
     </div>
     <div class="modal__main">
-      <div class="create-client__modal-step with-divider">
+      <div class="create-client__modal-contain with-divider">
         <div class="field__divider">
           <div class="field">
             <label for="" class="label">Impact level</label>
@@ -241,6 +247,11 @@
     </div>
     <div class="create-client__modal-footer">
       <div class="create-client__modal-btn-outer">
+        <button class="btn create-client__modal-btn cancel">
+          <span class="btn__inner-text cancel">Cancel</span>
+        </button>
+      </div>
+      <div class="create-client__modal-btn-outer">
         <button class="btn create-client__modal-btn">
           <span class="btn__inner-text change">Validate the change</span>
         </button>
@@ -248,12 +259,12 @@
     </div>
   </div>
   <!-- CREATE POPIN MODIFY PROCESS -->
-  <div class="create-client__modal edit__process" style="display:none">
+  <div class="create-client__modal edit__process modal-custom">
     <div class="modal__head">
       <h1 class="title__dashboard popin">Modify : Process</h1>
     </div>
     <div class="modal__main">
-      <div class="create-client__modal-step with-divider">
+      <div class="create-client__modal-contain with-divider">
         <div class="field__divider">
           <div class="field">
             <label for="" class="label">Status</label>
@@ -278,6 +289,11 @@
     </div>
     <div class="create-client__modal-footer">
       <div class="create-client__modal-btn-outer">
+        <button class="btn create-client__modal-btn cancel">
+          <span class="btn__inner-text cancel">Cancel</span>
+        </button>
+      </div>
+      <div class="create-client__modal-btn-outer">
         <button class="btn create-client__modal-btn">
           <span class="btn__inner-text change">Validate the change</span>
         </button>
@@ -285,5 +301,8 @@
     </div>
   </div>
 </body>
+
+<script src="../../../web/js/client.js"></script>
+
 
 </html>

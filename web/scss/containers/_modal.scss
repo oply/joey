@@ -38,3 +38,12 @@
         padding: 70px 11rem 70px;
     }
 }
+
+
+.modal-custom {
+    display: none;
+    
+    &.open {
+        display: block;
+    }
+}
