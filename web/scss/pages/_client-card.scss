@@ -1,0 +1,17 @@
+.client-card {
+	background: $bgBlue;
+
+	.contain-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.info-card {
+
+			p, a {
+				font-size: 10px;
+				text-align: right;
+			}
+		}
+	}
+}

@@ -24,6 +24,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-add:before {
+  content: "\e90a";
+}
+.icon-edit:before {
+  content: "\e90b";
+  color: #0a175e;
+}
+.icon-house:before {
+  content: "\e90c";
+  color: #0a175e;
+}
+.icon-phone:before {
+  content: "\e90d";
+  color: #0a175e;
+}
+.icon-user:before {
+  content: "\e90e";
+  color: #0a175e;
+}
 .icon-add-user:before {
   content: "\e908";
   color: #0a175e;
