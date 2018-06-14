@@ -13,3 +13,9 @@
 .color-turquoise {
     color: $turquoise;
 }
+
+.text-ellipsed {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

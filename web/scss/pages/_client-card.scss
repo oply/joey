@@ -15,4 +15,14 @@
 			text-align: right;
 		}
 	}
+
+	&__block-container {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+
+		.block-info {
+			width: 31%;
+		}
+	}
 }
