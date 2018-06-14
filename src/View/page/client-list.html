@@ -50,7 +50,7 @@
     </div>
   </header>
 
-  <div class="layout layout__dashboard">
+  <div class="layout ">
     <h1 class="title__dashboard">Client list</h1>
     <table class="table">
       <tr class="table__head-row">
@@ -195,7 +195,7 @@
         </div>
       </div>
       <!-- step 2 -->
-      <div class="create-client__modal-step with-divider step">
+      <div class="create-client__modal-step create-client__modal-contain with-divider step">
         <div class="field__divider">
           <div class="field">
             <label for="" class="label">Company name</label>
@@ -247,7 +247,12 @@
     </div>
     <div class="create-client__modal-footer">
       <div class="create-client__modal-btn-outer">
-        <button class="btn create-client__modal-btn">
+        <button class="btn create-client__modal-btn cancel">
+          <span class="btn__inner-text cancel">Cancel</span>
+        </button>
+      </div>
+      <div class="create-client__modal-btn-outer">
+        <button class="btn create-client__modal-btn next-step">
           <span class="btn__inner-text">1 / 3</span>
           <span class="btn__inner-text">Étape suivante</span>
         </button>
