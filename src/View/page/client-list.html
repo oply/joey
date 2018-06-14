@@ -35,7 +35,7 @@
 
       </div>
       <div class="header__rside">
-        <button class="btn btn__client">
+        <button class="btn btn__client addClientButton">
           <i class="icon-add-user"></i>Add a client</button>
         <div class="user">
           <p class="user__name">Mr. John Doe</p>
@@ -119,7 +119,138 @@
       </tr>
     </table>
   </div>
+  <div class="create-client__modal modalClosed">
+    <div class="modal__head">
+      <h1 class="title__dashboard">Create a new client</h1>
+      <div class="stepper">
+        <div class="stepper__steps">
+          <div class="stepper__step current">
+            <span class="stepper__step-number">1</span>
+            <span class="stepper__step-label">Personal informations</span>
+          </div>
+          <div class="stepper__step">
+            <span class="stepper__step-number">2</span>
+            <span class="stepper__step-label">Client company informations</span>
+          </div>
+          <div class="stepper__step">
+            <span class="stepper__step-number">3</span>
+            <span class="stepper__step-label">Process</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__main">
+      <!-- step 1 -->
+      <div class="create-client__modal-step step">
+        <div class="field">
+          <label for="" class="label">Civility</label>
+          <div class="input__text-icon">
+            <span class="input__icon">
+              <i class="icon-mail"></i>
+            </span>
+            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="" class="label">First name</label>
+          <div class="input__text-icon">
+            <span class="input__icon">
+              <i class="icon-mail"></i>
+            </span>
+            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="" class="label">Last name</label>
+          <div class="input__text-icon">
+            <span class="input__icon">
+              <i class="icon-mail"></i>
+            </span>
+            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="" class="label">Email</label>
+          <div class="input__text-icon">
+            <span class="input__icon">
+              <i class="icon-mail"></i>
+            </span>
+            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="" class="label">Phone</label>
+          <div class="input__text-icon">
+            <span class="input__icon">
+              <i class="icon-mail"></i>
+            </span>
+            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+          </div>
+        </div>
+      </div>
+      <!-- step 2 -->
+      <div class="create-client__modal-step with-divider step">
+        <div class="field__divider">
+          <div class="field">
+            <label for="" class="label">Company name</label>
+            <div class="input__text-icon">
+              <span class="input__icon">
+                <i class="icon-mail"></i>
+              </span>
+              <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+            </div>
+          </div>
+        </div>
+        <div class="field__divider">
+          <div class="field">
+            <label for="" class="label">Company address</label>
+            <div class="input__text-icon">
+              <span class="input__icon">
+                <i class="icon-mail"></i>
+              </span>
+              <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="label">Company zipcode</label>
+            <div class="input__text-icon">
+              <span class="input__icon">
+                <i class="icon-mail"></i>
+              </span>
+              <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="label">Company city</label>
+            <div class="input__text-icon">
+              <span class="input__icon">
+                <i class="icon-mail"></i>
+              </span>
+              <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- final step : success ! -->
+      <div class="create-client__modal-step success step">
+        <h2 class="modal__main-title">All done!</h2>
+        <p>The client
+          <b>Alison Charrier</b> has been created with success.</p>
+        <a href="">Check his customer card now</a>
+      </div>
+    </div>
+    <div class="create-client__modal-footer">
+      <div class="create-client__modal-btn-outer">
+        <button class="btn create-client__modal-btn">
+          <span class="btn__inner-text">1 / 3</span>
+          <span class="btn__inner-text">Étape suivante</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
 
 </body>
+<script src="../../../web/js/client.js"></script>
 
 </html>
