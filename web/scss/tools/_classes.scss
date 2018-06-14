@@ -10,6 +10,10 @@ body.modal-active {
     }
 }
 
+body.dashboard {
+    background: $bgBlue;
+}
+
 .color-green {
     color: $green;
 }
