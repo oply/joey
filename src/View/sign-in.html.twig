@@ -1,0 +1,47 @@
+{% extends "./index.html.twig" %}
+{% set classBody = 'sign-up' %}
+{% block title %}Joey - Connexion{% endblock %}
+{% block body %}
+    <div class="layout">
+        <header class="header-connect"><a href="">Oply</a></header>
+        <main>
+            <div class="sign-up__main">
+                <div class="sign-up__headtitle">
+                    <h1 class="title__first">Sign in to Joey</h1>
+                    <p class="subtitle">Petite catchline des familles</p>
+                </div>
+
+                <form action="" method="post">
+                    <div class="sign-up__form-body">
+                        <div class="field">
+                            <label for="" class="label">Email address<i class="tooltip-info icon-tooltip"></i></label>
+                            <div class="input__text-icon">
+                                <span class="input__icon"><i class="icon-mail"></i></span>
+                                <input name="mail" type="text" class="input__text" placeholder="johnidoe@oply.com" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Password</label>
+                            <div class="input__text-icon">
+                                <span class="input__icon"><i class="icon-key"></i></span>
+                                <input type="password"  name="pwd" class="input__text" placeholder="johnidoe@oply.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center" class="field--error">
+                        <p class="label">{{ error }}</p>
+                    </div>
+
+                    <div class="sign-up__form-footer">
+                        <div class="btn__outer">
+                            <button value="Se connecter" name="connexion_bouton" class="btn btn__center">Sign in now</button>
+                        </div>
+                        <p class="btn__bottom-msg">Doesn't have an account? <a href="/?a=sign-up">Sign up here</a></p>
+                    </div>
+                </form>
+            </div>
+            <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528813897/backgrounds/background-connect.svg" class="sign-up__bg-blue">
+            <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528813897/illustrations/illu-connect.png" class="sign-up__bg-connect">
+        </main>
+    </div>
+{% endblock %}
