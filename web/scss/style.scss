@@ -11,6 +11,7 @@
 @import 'pages/sign-up';
 @import 'pages/client-list';
 @import 'pages/client-create';
+@import 'pages/client-card';
 
 
 // ATOMS
@@ -20,6 +21,7 @@
 // even smaller then atoms
 @import 'components/tag';
 @import 'components/btn';
+@import 'components/block-info';
 
 // titles
 @import 'components/title';

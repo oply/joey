@@ -1,0 +1,28 @@
+.client-card {
+	background: $bgBlue;
+
+	&__headtitle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__side-infos {
+		line-height: 1.6;
+		p,
+		a {
+			font-size: .85rem;
+			text-align: right;
+		}
+	}
+
+	&__block-container {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+
+		.block-info {
+			width: 31%;
+		}
+	}
+}
