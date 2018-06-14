@@ -25,6 +25,11 @@
 
 	&__inner-text {
 		color: inherit;
+
+		&.change {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 
 	&__center {
