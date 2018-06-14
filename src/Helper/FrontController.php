@@ -4,7 +4,7 @@
 namespace Joey\Helper;
 
 use Joey\Controller\admin\AdminController;
-use Joey\Controller\SecurityController;
+use Joey\Controller\Security\SecurityController;
 
 class FrontController
 {
@@ -43,7 +43,7 @@ class FrontController
                     $output     = $controller->adminAddClient();
                     break;
 
-               case "admin/client/edit";
+                case "admin/client/edit";
                     $controller = new AdminController();
                     $output     = $controller->adminEditClient();
                     break;
@@ -51,6 +51,26 @@ class FrontController
                 case "admin/client/delete":
                     $controller = new AdminController();
                     $output     = $controller->adminDeleteClient();
+                    break;
+
+                case "admin/sales";
+                    $controller = new AdminController();
+                    $output     = $controller->adminSales();
+                    break;
+
+                case "admin/sales/add";
+                    $controller = new AdminController();
+                    $output     = $controller->adminAddSales();
+                    break;
+
+                case "admin/sales/edit";
+                    $controller = new AdminController();
+                    $output     = $controller->adminEditSales();
+                    break;
+
+                case "admin/sales/delete":
+                    $controller = new AdminController();
+                    $output     = $controller->adminDeleteSales();
                     break;
 //
 //                case "details":

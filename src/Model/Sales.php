@@ -38,6 +38,30 @@ class Sales
 
     }
 
+
+    public function findOne($data)
+    {
+        $query = "SELECT
+                   id, 
+                   first_name,
+                   last_name,
+                   mail,
+                   pwd,
+                   phone
+                 FROM 
+                   sales
+                 WHERE 
+                    id = :id  
+                   ";
+
+        $stmt = $this->connect->prepare($query);
+        $stmt->bindValue('id', $data);
+        $stmt->execute();
+
+        return $stmt->fetch(\PDO::FETCH_OBJ);
+
+    }
+
     public function add($data)
     {
         $query = "INSERT INTO 
@@ -52,6 +76,7 @@ class Sales
                   )
                   VALUE 
                   (
+                  NULL ,
                   :mail,
                   :pwd,
                   :phone,
@@ -65,6 +90,7 @@ class Sales
         $stmt->bindValue('phone',      $data['phone']);
         $stmt->bindValue('first_name', $data['first_name']);
         $stmt->bindValue('last_name',  $data['last_name']);
+
         $stmt->execute();
 //        $this->errorManagement($stmt);
         return $this->connect->lastInsertId();
@@ -92,7 +118,6 @@ class Sales
         $stmt->bindValue('first_name', $data['first_name'] ?? '');
         $stmt->bindValue('last_name', $data['last_name'] ?? '');
         $stmt->execute();
-
         return true;
     }
 

@@ -1,6 +1,8 @@
 {% extends "./index.html.twig" %}
 {% block body %}
-    {% for client in clients %}
+    <div>
+        <a href="?a=admin/client/add">Ajouter</a>
+    </div>
         <table>
             <thead>
                 <tr>
@@ -23,6 +25,7 @@
                 </tr>
             </thead>
             <tbody>
+    {% for client in clients %}
                 <tr>
                     <td>{{ client.id }}</td>
                     <td>{{ client.fist_name }}</td>
@@ -45,7 +48,7 @@
                     <td><a href="?a=admin/client/edit&id={{ client.id }}">edit</a></td>
                     <td><a href="?a=admin/client/delete&id={{ client.id }}">delete</a></td>
                 </tr>
+    {% endfor %}
             </tbody>
         </table>
-    {% endfor %}
 {% endblock %}

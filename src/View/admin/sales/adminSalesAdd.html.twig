@@ -1,0 +1,30 @@
+{% extends "./index.html.twig" %}
+{% block body %}
+    <form action="" method="post">
+
+        <div>
+            <input type="hidden" name="id" value="">
+        </div>
+        <div>
+            <label for="">Prénom</label>
+            <input type="text" name="first_name">
+        </div>
+        <div>
+            <label for="">Nom</label>
+            <input type="text" name="last_name">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="mail">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="pwd" >
+        </div>
+        <div>
+            <label for="">Téléphone</label>
+            <input type="text" name="phone" >
+        </div>
+        <input type="submit" name="submit" value="Valider">
+    </form>
+{% endblock %}

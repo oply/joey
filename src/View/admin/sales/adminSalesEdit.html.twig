@@ -1,0 +1,31 @@
+{% extends "./index.html.twig" %}
+{% block body %}
+    <form action="" method="post">
+
+        <div>
+            <input type="hidden" name="id" value="{{ sales.id }}">
+        </div>
+        <div>
+            <label for="">Prénom</label>
+            <input type="text" name="first_name" value="{{ sales.first_name }}">
+        </div>
+        <div>
+            <label for="">Nom</label>
+            <input type="text" name="last_name" value="{{ sales.last_name }}">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="mail" value="{{ sales.mail }}">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="text" name="pwd" value="{{ sales.pwd }}">
+        </div>
+        <div>
+            <label for="">Téléphone</label>
+            <input type="text" name="phone" value="{{ sales.phone }}">
+        </div>
+        <input type="submit" name="submit" value="Valider">
+        <a href="?a=admin/sales/delete&id={{ sales.id }}">delete</a>
+    </form>
+{% endblock %}

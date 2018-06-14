@@ -1,6 +1,6 @@
 <?php
 
-namespace Joey\Controller;
+namespace Joey\Controller\Security;
 
 use Joey\Helper\BaseController;
 use Joey\Helper\Connect;
@@ -20,23 +20,25 @@ class SecurityController extends BaseController
         $this->bdd = Connect::getConnect();
 
     }
-    public function login(){
-        if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['connexion_bouton'] = 'Se Connecter'){
-           $verif = $this->verif($_POST);
-           if ($verif){
-               $this->session();
-               header('Location: ./?a=admin/home');
-               exit();
+    public function login()
+    {
+        if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['connexion_bouton'] = 'Se Connecter') {
+            $verif = $this->verif($_POST);
+            if ($verif){
+                $this->session();
+                header('Location: ./?a=admin/home');
+                exit();
 
-           }else{
-               return "Le mail est inexistant ou Mot de passe incorrect";
-           }
+            }else{
+                return "Le mail est inexistant ou Mot de passe incorrect";
+            }
 
         }
         echo self::$twig->render("login.html.twig");
     }
 
-    public function logout(){
+    public function logout()
+    {
         $session = Session::getInstance();
         $session->destroy();
         header('Location: ./?a=login');
@@ -65,6 +67,7 @@ class SecurityController extends BaseController
         return $requete->fetch();
 
     }
+
     public function verifSales($data)
     {
         $sql = "SELECT
@@ -110,7 +113,8 @@ class SecurityController extends BaseController
 
     }
 
-    public function verif($data){
+    public function verif($data)
+    {
         $reponse = $this->verifAdmin($data);
         if($reponse){
             $this->setId($reponse['id']);
@@ -141,6 +145,7 @@ class SecurityController extends BaseController
         }
 
     }
+
     public function session()
     {
 

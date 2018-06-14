@@ -1,0 +1,34 @@
+{% extends "./index.html.twig" %}
+{% block body %}
+    <div>
+        <a href="?a=admin/sales/add">Ajouter</a>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>mail</th>
+            <th>pwd</th>
+            <th>phone</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for sales in saless %}
+            <tr>
+                <td>{{ sales.id }}</td>
+                <td>{{ sales.first_name }}</td>
+                <td>{{ sales.last_name }}</td>
+                <td>{{ sales.mail }}</td>
+                <td>{{ sales.pwd }}</td>
+                <td>{{ sales.phone }}</td>
+                <td><a href="?a=admin/sales/edit&id={{ sales.id }}">edit</a></td>
+                <td><a href="?a=admin/sales/delete&id={{ sales.id }}">delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
