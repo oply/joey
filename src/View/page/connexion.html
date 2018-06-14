@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Joey - Connexion</title>
+    <title>Joey - Sign up</title>
     <link rel="stylesheet" type="text/css" href="../../../web/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,800" rel="stylesheet">
 </head>
+
 <body class="sign-up">
     <div class="layout">
-        <header class="header-connect"><a href="">Oply</a></header>
+        <header class="header-connect">
+            <a href="">Oply</a>
+        </header>
 
         <main>
             <div class="sign-up__main">
@@ -18,30 +22,39 @@
                     <h1 class="title__first">Sign in to Joey</h1>
                     <p class="subtitle">Petite catchline des familles</p>
                 </div>
-            
-                <form action="">
+
+                <form action="" class="formData" name="LOGIN">
                     <div class="sign-up__form-body">
                         <div class="field">
-                            <label for="" class="label">Email address<i class="tooltip-info icon-tooltip"></i></label>
+                            <label for="" class="label">Email address
+                                <i class="tooltip-info icon-tooltip"></i>
+                            </label>
                             <div class="input__text-icon">
-                                <span class="input__icon"><i class="icon-mail"></i></span>
-                                <input name="mail" type="text" class="input__text" placeholder="johnidoe@oply.com" required>
+                                <span class="input__icon">
+                                    <i class="icon-mail"></i>
+                                </span>
+                                <input type="text" name="email" class="input__text" placeholder="johnidoe@oply.com">
                             </div>
                         </div>
                         <div class="field">
                             <label for="" class="label">Password</label>
                             <div class="input__text-icon">
-                                <span class="input__icon"><i class="icon-key"></i></span>
-                                <input type="password" class="input__text" placeholder="johnidoe@oply.com" required>
+                                <span class="input__icon">
+                                    <i class="icon-key"></i>
+                                </span>
+                                <input type="text" name="password" class="input__text" placeholder="johnidoe@oply.com">
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="sign-up__form-footer">
                         <div class="btn__outer">
-                            <button class="btn btn__center">Sign in now</button>
+                            <button class="btn btn__center" type="submit">Sign in now</button>
                         </div>
-                        <p class="btn__bottom-msg">Doesn't have an account? <a href="">Sign up here</a></p>
+                        <p class="btn__bottom-msg">Doesn't have an account?
+                            <a href="">Sign up here</a>
+                            </a>
+                        </p>
                     </div>
                 </form>
             </div>
@@ -49,6 +62,9 @@
             <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528813897/illustrations/illu-connect.png" class="sign-up__bg-connect">
         </main>
     </div>
-    
+
 </body>
+
+<script src="../../../web/js/actions.js"></script>
+
 </html>

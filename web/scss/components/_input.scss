@@ -1,9 +1,10 @@
 .input__text {
-    font-size: .75rem;
+    font-size: .85rem;
     padding: 1rem 1.5rem;
     border: 1px solid $dividerLight;
     border-radius: $radiusSmall;
     transition: .2s $cubic01;
+    color: $bodyColor;
 
     &:focus {
         border-color: $blue;

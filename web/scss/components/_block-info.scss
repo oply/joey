@@ -1,0 +1,64 @@
+.block-info {
+	background: $white;
+	border: 1px solid $dividerLight;
+	border-radius: 2px;
+	min-height: 235px;
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid $dividerLight;
+		padding: 0 24px;
+
+		.icon {
+			cursor: pointer;
+		}
+	}
+
+	&__main {
+		padding: 1.5rem 2rem;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		margin-bottom: 14px;
+
+		span[class^="icon"] {
+			margin-right: 12px;
+		}
+
+		.icon-mail {
+			font-size: 11px;
+		}
+
+		.icon-user {
+			font-size: 18px;
+		}
+
+		.icon-phone {
+			font-size: 19px;
+		}
+	}
+
+	&__content--singleLine {
+		@extend .block-info__content;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__content--centered {
+		@extend .block-info__content;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		p {
+			margin-top: 30px;
+			margin-bottom: 22px;
+		}
+
+	}
+}

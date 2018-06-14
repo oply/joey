@@ -1,11 +1,27 @@
 .user {
+    position: relative;
     display: flex;
     align-items: center;
+    padding: 10px 0;
+    cursor: poiter;
+
+    &:hover {
+        .user__log-out {
+            display: block;
+        }
+    }
 
     &__name {
+        display: flex;
+        align-items: center;
         color: $textBlue;
         white-space: nowrap;
-        margin-right: 1rem;
+        cursor: pointer;
+
+        i {
+            font-size: 5px;
+            margin-left: 12px;
+        }
     }
 
     &__img {
@@ -13,5 +29,35 @@
         height: 40px;
         width: 40px;
         background-color: $textBlue;
+    }
+
+    &__log-out {
+        display: none;
+        position: absolute;
+        top: 36px;
+        border: 1px solid #E3E9F3;  
+        border-radius: 4px; 
+        box-shadow: 0 3px 11px 0 rgba(149,184,255,0.3);
+        right: 0;
+        left: 0;
+
+        &:hover {
+            display: block;
+        }
+
+        &__link {
+            display: block;
+            padding: 12px 0;
+            border-radius: 4px; 
+            background: #F4F8FF;
+            text-align: center;
+            text-decoration: none;
+            border: 6px solid $white;
+
+
+            .icon-log-out {
+                margin-right: 10px;
+            }
+        }
     }
 }

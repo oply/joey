@@ -13,6 +13,8 @@
 }
 
 .create-client__modal {
+    transition: 0.2s;
+
     position: absolute;
     width: 80%;
     margin: auto;
@@ -21,9 +23,7 @@
     top: 10vh; // to change
     bottom: 0;
     &-step {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: none;
         .field {
             width: 31%;
             margin-bottom: 2rem;
@@ -32,11 +32,12 @@
             content: "";
             width: 31%;
         }
-        // // to remove for js scripts
-        &:nth-child(n+1) {
-            display: none;
-        }
-        &.with-divider {
+
+        &-active {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &.with-divider {
             display: flex;
             flex-direction: column;
             .field__divider {
@@ -49,6 +50,9 @@
             flex-direction: column;
             text-align: center;
         }
+        }
+        
+        
     }
     &-btn-outer {
         flex: 1;

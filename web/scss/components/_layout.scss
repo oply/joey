@@ -12,4 +12,10 @@
     @include minWidth($bpDesktopSm) {
         width: 80%;
     }
+
+    &__blur {
+        filter: blur(15px);
+        transition: filter 0.3s;
+
+    }
 }

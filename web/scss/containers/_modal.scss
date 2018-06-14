@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.modalClosed {
+    transition: 0.2s;
+    display: none;
+}
+
 .modal__main {
     background: $white;
     border: 1px solid $dividerLight;
@@ -12,5 +17,24 @@
     &-title {
         @extend .title__first;
         font-weight: $fwRegular;
+    }
+}
+
+.edit__complementaryInfos {
+
+    .field__divider {
+        &:after {
+            content: "";
+            width: 31%;
+        }
+    }
+}
+
+.client-card {
+
+    .modal__main {
+        padding-top: 70px;
+        min-height: 366px;
+        padding: 70px 11rem 70px;
     }
 }
