@@ -1,0 +1,16 @@
+.modal__head {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.modal__main {
+    background: $white;
+    border: 1px solid $dividerLight;
+    border-radius: $radiusSmall;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    &-title {
+        @extend .title__first;
+        font-weight: $fwRegular;
+    }
+}

@@ -5,17 +5,27 @@
 
     // table head
     &__head-cell {
+        display: inline-flex;
+        justify-content: center;
         padding: .75rem;
         font-weight: 300;
         text-transform: uppercase;
         color: $grey;
         letter-spacing: .25px;
+        cursor: pointer;
 
         .icon-arrow-bottom {
+            margin-left: .5rem;
             &:before {
                 color: $grey;
                 font-size: 6px;
             }
+        }
+    }
+
+    &__head-cell.current {
+        .icon-arrow-bottom {
+            transform: rotate(180deg);
         }
     }
 
