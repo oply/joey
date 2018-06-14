@@ -8,13 +8,16 @@
     }
     &__modal-footer {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
+}
+
+.layout__dashboard {
+    filter: blur(15px);
 }
 
 .create-client__modal {
     transition: 0.2s;
-
     position: absolute;
     width: 80%;
     margin: auto;
@@ -22,6 +25,7 @@
     right: 0;
     top: 10vh; // to change
     bottom: 0;
+
     &-step {
         display: none;
         .field {
@@ -54,6 +58,38 @@
         
         
     }
+
+    .cancel {
+        background: $grey; 
+
+        &.btn:hover {
+            background: $grey; 
+        }
+    }
+
+    &-contain {
+
+        &.with-divider {
+            display: flex;
+            flex-direction: column;
+            .field__divider {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .field {
+            width: 31%;
+            margin-bottom: 2rem;
+        }
+
+        &:after {
+            content: "";
+            width: 31%;
+        }
+    
+    }
+
     &-btn-outer {
         flex: 1;
         max-width: 300px;

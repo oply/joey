@@ -1,0 +1,94 @@
+{% extends "./index.html.twig" %}
+{% block body %}
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__lside">
+                <a href="" class="header__logo">
+                    <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">
+                    <span>JOEY</span>
+                </a>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-inner">
+                        <li class="header__nav-el">
+                            <a href="?a=sales/client">Client list</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="header__rside">
+                <button class="btn btn__client">
+                    <a class="icon-add-user" href="?a=sales/client/add"></a>Add a client</button>
+                <div class="user">
+                    <p class="user__name">Mr. John Doe</p>
+                    <div class="user__img"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="layout layout__dashboard">
+        <h1 class="title__dashboard">Client list</h1>
+        <table class="table">
+            <tr class="table__head-row">
+                <th>
+                    <div class="table__head-cell current">
+                        Account name
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Last name
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Name
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Status
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Created at
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Office home
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+                <th>
+                    <div class="table__head-cell">
+                        Impact level
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </th>
+            </tr>
+            {% for client in clients %}
+
+            <tr class="table__body-row">
+                <td class="table__body-cell">{{ client.company }}</td>
+                <td class="table__body-cell">{{ client.last_name }}</td>
+                <td class="table__body-cell">{{ client.first_name }}</td>
+                <td class="table__body-cell">
+                    <span class="tag__process color-turquoise">{{ client.status }}</span>
+                </td><td class="table__body-cell">{{ client.date_create }}</td>
+                <td class="table__body-cell">{{ client.phone }}</td>
+                <td class="table__body-cell">
+                    <span class="tag__impact high">{{ client.property }}</span>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
