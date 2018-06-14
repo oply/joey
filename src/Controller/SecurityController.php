@@ -31,7 +31,6 @@ class SecurityController extends BaseController
         if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['connexion_bouton'] = 'Se Connecter'){
            $verif = $this->verif($_POST);
 
-
            if ($verif){
                $this->session();
 
@@ -104,7 +103,7 @@ class SecurityController extends BaseController
 
         $requete = $this->bdd->prepare($sql);
         $requete->bindValue('mail', $data['mail']);
-        $requete->bindValue('pwd', $data['pwd']);
+        $requete->bindValue('pwd', hash("sha256",$data['pwd']));
         $requete->execute();
 
 
@@ -126,7 +125,7 @@ class SecurityController extends BaseController
 
         $requete = $this->bdd->prepare($sql);
         $requete->bindValue('mail', $data['mail']);
-        $requete->bindValue('pwd', $data['pwd']);
+        $requete->bindValue('pwd', hash("sha256",$data['pwd']));
         $requete->execute();
 
 
@@ -171,7 +170,7 @@ class SecurityController extends BaseController
 
         $requete = $this->bdd->prepare($sql);
         $requete->bindValue('mail', $data['mail']);
-        $requete->bindValue('pwd', $data['pwd']);
+        $requete->bindValue('pwd', hash("sha256",$data['pwd']));
         $requete->execute();
 
 

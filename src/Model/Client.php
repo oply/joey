@@ -123,7 +123,7 @@ class Client
         $stmt->bindValue('first_name', $data['first_name']);
         $stmt->bindValue('last_name', $data['last_name']);
         $stmt->bindValue('mail', $data['mail']);
-        $stmt->bindValue('pwd', $data['pwd']);
+        $stmt->bindValue('pwd', hash("sha256",$data['pwd']));
         $stmt->bindValue('civility', $data['civility']);
         $stmt->bindValue('phone',  $data['phone']);
         $stmt->bindValue('adress', $data['adress']);
@@ -167,7 +167,7 @@ class Client
         $stmt->bindValue('first_name', $data['first_name'] ?? '');
         $stmt->bindValue('last_name', $data['last_name'] ?? '');
         $stmt->bindValue('mail', $data['mail'] ?? '');
-        $stmt->bindValue('pwd', $data['pwd'] ?? '');
+        $stmt->bindValue('pwd', hash("sha256",$data['pwd']) ?? '');
         $stmt->bindValue('civility', $data['civility'] ?? '');
         $stmt->bindValue('phone',  $data['phone'] ?? '');
         $stmt->bindValue('adress', $data['adress'] ?? '');
