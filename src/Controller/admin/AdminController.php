@@ -1,6 +1,6 @@
 <?php
 
-namespace Joey\Controller;
+namespace Joey\Controller\admin;
 
 use Joey\Helper\BaseController;
 use Joey\Helper\Session;
@@ -22,19 +22,18 @@ class AdminController extends BaseController
         parent::__construct();
         $this->admin  = new Admin();
         $this->client = new Client();
-        if(¡Session::isSessionState()){
-
-        $this->session = Session::getInstance();
-        }
-        dump($this->session);
-        dump(Session::isSessionState());
-        die;
+//        if(!Session::isSessionState()){
+//
+//        $this->session = Session::getInstance();
+//        }
+//        dump($this->session);
+//        dump(Session::isSessionState());
+//        die;
 
     }
 
 
-    public function adminHome()
-    {
+    public function adminHome(){
         $session = Session::getInstance();
         dump($session->id);
         dump($_SESSION);
@@ -69,18 +68,17 @@ class AdminController extends BaseController
         ]);
 
     }
-
-    public function adminAdd()
+    public function adminAddClient()
     {
         if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-            $this->admin->add($_POST);
-        }
+            $this->client->add($_POST);
 
         header('Location: ./?a=admin');
         exit();
+        }
+        echo self::$twig->render("admin/client/adminClientAdd.html.twig", [
+        ]);
     }
-
-
     public function adminDeleteClient()
     {
         $data = $this->client->delete($_GET['id'] ?? false);

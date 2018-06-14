@@ -3,7 +3,7 @@
 
 namespace Joey\Helper;
 
-use Joey\Controller\AdminController;
+use Joey\Controller\admin\AdminController;
 use Joey\Controller\SecurityController;
 
 class FrontController
@@ -20,12 +20,12 @@ class FrontController
             switch ($a) {
                 case "login";
                     $controller = new SecurityController();
-                    $controller->login();
+                    $output     = $controller->login();
                     break;
 
                 case "logout";
                     $controller = new SecurityController();
-                    $controller->logout();
+                    $output     = $controller->logout();
                     break;
 
                 case "admin/home":
@@ -35,12 +35,17 @@ class FrontController
 
                 case "admin/client";
                     $controller = new AdminController();
-                    $controller->adminClient();
+                    $output     = $controller->adminClient();
+                    break;
+
+                case "admin/client/add";
+                    $controller = new AdminController();
+                    $output     = $controller->adminAddClient();
                     break;
 
                case "admin/client/edit";
                     $controller = new AdminController();
-                    $controller->adminEditClient();
+                    $output     = $controller->adminEditClient();
                     break;
 
                 case "admin/client/delete":

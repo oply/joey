@@ -126,6 +126,8 @@ class Client
         $stmt->bindValue('country', $data['country']);
         $stmt->bindValue('dob', $data['dob']);
         $stmt->execute();
+        dump($stmt->execute());
+        dump($stmt);
         //        $this->errorManagement($stmt);
         return $this->connect->lastInsertId();
 
