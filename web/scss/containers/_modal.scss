@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.modalClosed {
+    transition: 0.2s;
+    display: none;
+}
+
 .modal__main {
     background: $white;
     border: 1px solid $dividerLight;
