@@ -6,7 +6,6 @@
   const background = document.querySelector(" .layout__dashboard");
 
   addClientButton.addEventListener("click", () => {
-    console.log(count);
     if (count === 3) {
       count = 0;
       for (var i = 0; i < STEPS.length; i++) {
@@ -27,11 +26,11 @@
   const INFOS_ACTION_BUTTON = document.querySelector(
     ".create-client__modal-btn span.btn__inner-text:first-child"
   );
+  const ALL_INPUTS = document.querySelectorAll("input");
 
   ACTION_BUTTON.addEventListener("click", function() {
     if (count !== STEPS.length) {
       count++;
-      console.log(count, "-------");
     }
 
     if (STEPS[count - 1]) {
@@ -44,10 +43,11 @@
       count = 0;
       modal.classList.toggle("modalClosed");
       background.classList.toggle("layout__blur");
+      for (var i = 0; i < ALL_INPUTS.length; i++) {
+        ALL_INPUTS[i].value = "";
+      }
     }
 
     INFOS_ACTION_BUTTON.innerHTML = count + 1 + "/3";
-
-    console.log(STEPS.length, "STEPS_LENGTH");
   });
 })();
