@@ -22,39 +22,18 @@
 
 .custom-select-trigger {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-width: 150px;
   padding: 0 1.5rem 0 22px;
-  font-size: 16px;
-  font-weight: 300;
-  color: #000;
+  // font-weight: $fwLight;
   line-height: 50px;
   background: #FFF;
-  border-radius: 4px;
+  border-radius: $radiusSmall;
   cursor: pointer;
   height: 50px;
-  border: 1px solid #E3E9F3
-}
-
-.custom-select-trigger:after {
-  position: absolute;
-  display: block;
-  content: '';
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  right: 25px;
-  margin-top: -3px;
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
-  transform: rotate(45deg) translateY(-50%);
-  transition: all .2s ease-in-out;
-  transform-origin: 50% 0;
-}
-
-.custom-select.opened .custom-select-trigger:after {
-  margin-top: 3px;
-  transform: rotate(-135deg) translateY(-50%);
+  border: 1px solid $dividerLight;
 }
 
 .custom-options {
@@ -65,13 +44,13 @@
   right: 0;
   min-width: 100%;
   margin: 15px 0;
-  border: 1px solid #E3E9F3;
-  border-radius: 4px;
+  border: 1px solid $dividerLight;
+  border-radius: $radiusSmall;
   box-sizing: border-box;
   box-shadow: 0 2px 1px rgba(0, 0, 0, .07);
-  background: #fff;
-  transition: all .4s ease-in-out;
-  margin-top: 30px;
+  background: $white;
+  transition: .15s $cubic01;
+  margin-top: 25px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -86,7 +65,7 @@
   pointer-events: all;
   max-height: 200px;
   overflow: auto;
-  box-shadow: 0px 0px 11px 1px rgba(226, 231, 240, 1);
+  box-shadow: $boxShadow02;
 }
 
 .option-hover:before {
@@ -97,13 +76,9 @@
   position: relative;
   display: block;
   padding: 0 22px;
-  margin: 8px;
-  font-size: 15px;
-  color: #000;
-  line-height: 47px;
-  font-weight: 300;
+  line-height: 40px;
+  transition: .1s $cubic01;
   cursor: pointer;
-  transition: all .1s ease-in-out;
 }
 
 .custom-option:first-of-type {
