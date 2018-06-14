@@ -28,6 +28,10 @@
 		align-items: center;
 		.btn__client {
 			margin-right: 2.5rem;
+
+			i {
+				font-size: 12px;
+			}
 		}
 	} // logo
 	&__logo {
