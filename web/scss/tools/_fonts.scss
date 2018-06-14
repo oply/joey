@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-log-out:before {
+  content: "\e911";
+  color: #0a175e;
+}
 .icon-add:before {
   content: "\e90a";
 }
