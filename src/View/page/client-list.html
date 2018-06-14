@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,800" rel="stylesheet">
 </head>
 
-<body class="client-list">
+<body class="dashboard">
   <header class="header">
     <div class="header__inner">
       <div class="header__lside">
@@ -150,30 +150,32 @@
       <div class="create-client__modal-step step">
         <div class="field">
           <label for="" class="label">Civility</label>
-          <div class="input__text-icon">
-            <span class="input__icon">
-              <i class="icon-mail"></i>
-            </span>
-            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-          </div>
+            <div class="custom-select-wrapper">
+                <select name="sources" id="sources" class="custom-select sources" placeholder="SELECTOR" style="display: none;">
+                    <option value="profile">Mr.</option>
+                    <option value="profile">Mrs.</option>
+                    <option value="word">Miss</option>
+                </select>
+                <div class="custom-select sources">
+                    <span class="custom-select-trigger">
+                        <span>Civility</span>
+                        <i class="icon-select"></i>
+                    </span>
+                    <div class="custom-options">
+                        <span class="custom-option" data-value="profile">Mr.</span>
+                        <span class="custom-option" data-value="profile">Mrs.</span>
+                        <span class="custom-option" data-value="word">Miss</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="field">
           <label for="" class="label">First name</label>
-          <div class="input__text-icon">
-            <span class="input__icon">
-              <i class="icon-mail"></i>
-            </span>
-            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-          </div>
+          <input type="text" class="input__text" placeholder="Exemple: John">
         </div>
         <div class="field">
           <label for="" class="label">Last name</label>
-          <div class="input__text-icon">
-            <span class="input__icon">
-              <i class="icon-mail"></i>
-            </span>
-            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-          </div>
+          <input type="text" class="input__text" placeholder="Exemple: Doe">
         </div>
         <div class="field">
           <label for="" class="label">Email</label>
@@ -188,52 +190,32 @@
           <label for="" class="label">Phone</label>
           <div class="input__text-icon">
             <span class="input__icon">
-              <i class="icon-mail"></i>
+              <i class="icon-phone"></i>
             </span>
-            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+            <input type="text" class="input__text" placeholder="+331 01 02 03 04">
           </div>
         </div>
       </div>
       <!-- step 2 -->
-      <div class="create-client__modal-step create-client__modal-contain with-divider step">
+      <div class="create-client__modal-step with-divider step">
         <div class="field__divider">
           <div class="field">
             <label for="" class="label">Company name</label>
-            <div class="input__text-icon">
-              <span class="input__icon">
-                <i class="icon-mail"></i>
-              </span>
-              <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-            </div>
+            <input type="text" class="input__text" placeholder="Exemple: Oply">
           </div>
         </div>
         <div class="field__divider">
           <div class="field">
             <label for="" class="label">Company address</label>
-            <div class="input__text-icon">
-              <span class="input__icon">
-                <i class="icon-mail"></i>
-              </span>
-              <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-            </div>
+            <input type="text" class="input__text" placeholder="Exemple: 10 Carnaby St.">
           </div>
           <div class="field">
             <label for="" class="label">Company zipcode</label>
-            <div class="input__text-icon">
-              <span class="input__icon">
-                <i class="icon-mail"></i>
-              </span>
-              <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-            </div>
+            <input type="text" class="input__text" placeholder="Exemple: 95020">
           </div>
           <div class="field">
             <label for="" class="label">Company city</label>
-            <div class="input__text-icon">
-              <span class="input__icon">
-                <i class="icon-mail"></i>
-              </span>
-              <input type="text" class="input__text" placeholder="johnidoe@oply.com">
-            </div>
+            <input type="text" class="input__text" placeholder="Exemple: London">
           </div>
         </div>
       </div>
