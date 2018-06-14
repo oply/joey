@@ -1,0 +1,66 @@
+.block__container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 26px;
+
+	.block-info {
+		max-width: calc(33.333% - 16px);
+	}
+}
+
+.block-info {
+	background: $white;
+	border: 1px solid #E3E9F3;
+	border-radius: 2px;
+	height: 235px;
+	width: 100%;
+
+	.info__containTitle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #E3E9F3;
+		padding: 0 24px 0 34px;
+
+		.icon {
+			cursor: pointer;
+		}
+	}
+
+	.info__text {
+		display: flex;
+		align-items: center;
+		padding: 0 24px 0 34px;
+		margin-bottom: 14px;
+
+		p {
+			font-size: 16px;
+			margin-left: 12px;
+		}
+
+		.icon-mail {
+			font-size: 11px;
+		}
+
+		.icon-user {
+			font-size: 18px;
+		}
+
+		.icon-phone {
+			font-size: 19px;
+		}
+
+		&.first {
+			margin-top: 20px;
+		}
+	}
+
+	.info__data {
+		flex-direction: column;
+
+		p {
+			margin-top: 30px;
+			margin-bottom: 22px;
+		}
+	}
+}

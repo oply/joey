@@ -57,3 +57,20 @@
 		margin-right: .5rem;
 	}
 }
+
+.btn__visit {
+	display: flex;
+	align-items: center;
+	max-width: 265px;
+	padding: 0 19px;
+	height: 48px;
+	font-size: 12px;
+	line-height: 25px;
+	font-weight: $fwLight;
+
+	.icon-add:before {
+		font-size: 1.3rem;
+		color: $white;
+		margin-right: .5rem;
+	}
+}
