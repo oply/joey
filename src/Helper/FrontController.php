@@ -65,6 +65,11 @@ class FrontController
                     $output     = $controller->salesClient();
                     break;
 
+                case "sales/client/add";
+                    $controller = new SalesController();
+                    $output     = $controller->salesAddClient();
+                    break;
+
 //                case "admin/sales";
 //                    $controller = new AdminController();
 //                    $output     = $controller->

@@ -37,4 +37,13 @@ class SalesController extends BaseController
         ]);
 
     }
+
+    public function salesAddClient()
+    {
+
+
+        echo self::$twig->render("sales/salesClientAdd.html.twig", [
+        ]);
+
+    }
 }

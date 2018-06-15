@@ -1,0 +1,122 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__lside">
+                <a href="" class="header__logo">
+                    <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">
+                    <span>JOEY</span>
+                </a>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-inner">
+                        <li class="header__nav-el current">
+                            <a href="">Client list</a>
+                        </li>
+                        <li class="header__nav-el">
+                            <a href="">Sales list</a>
+                        </li>
+                        <li class="header__nav-el">
+                            <a href="">Manage my account</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="header__rside">
+                <button class="btn btn__client">
+                    <i class="icon-add-user"></i>Add a client</button>
+                <div class="user">
+                    <p class="user__name">Mr. John Doe <i class="icon-arrow-bottom"></i></p>
+                    <div class="user__log-out">
+                        <a href="#" class="user__log-out__link"><i class="icon-log-out"></i>Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><q></q>
+
+
+    <!-- CREATE POPIN ACCOUNT INFORMATION -->
+    <div class="create-client__modal edit__accountInformation modal-custom">
+        <div class="modal__head">
+            <h1 class="title__dashboard popin">Modify : Account information</h1>
+        </div>
+        <div class="modal__main">
+            <div class="create-client__modal-contain with-divider">
+                <div class="field__divider">
+                    <div class="field">
+                        <label for="" class="label">Civility</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Email</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Company name</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                </div>
+                <div class="field__divider">
+                    <div class="field">
+                        <label for="" class="label">Last name</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Phone</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Company city</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                </div>
+                <div class="field__divider">
+                    <div class="field">
+                        <label for="" class="label">First name</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Company address</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Company zipcode</label>
+                        <div class="input__text-icon">
+                            <input type="text" class="input__text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="create-client__modal-footer">
+            <div class="create-client__modal-btn-outer">
+                <button class="btn create-client__modal-btn cancel">
+                    <span class="btn__inner-text cancel">Cancel</span>
+                </button>
+            </div>
+            <div class="create-client__modal-btn-outer">
+                <button class="btn create-client__modal-btn">
+                    <span class="btn__inner-text change">Validate the change</span>
+                </button>
+            </div>
+        </div>
+    </div>{% endblock %}

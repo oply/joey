@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Joey - Sign up</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,800" rel="stylesheet">
+</head>
+
+<body class="dashboard">
+<header class="header">
+    <div class="header__inner">
+        <div class="header__lside">
+            <a href="" class="header__logo">
+                <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">
+                <span>JOEY</span>
+            </a>
+
+            <nav class="header__nav">
+                <ul class="header__nav-inner">
+                    <li class="header__nav-el current">
+                        <a href="">Client list</a>
+                    </li>
+                    <li class="header__nav-el">
+                        <a href="">Sales list</a>
+                    </li>
+                    <li class="header__nav-el">
+                        <a href="">Manage my account</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="header__rside">
+            <button class="btn btn__client">
+                <i class="icon-add-user"></i>Add a client</button>
+            <div class="user">
+                <p class="user__name">Mr. John Doe <i class="icon-arrow-bottom"></i></p>
+                <div class="user__log-out">
+                    <a href="#" class="user__log-out__link"><i class="icon-log-out"></i>Log out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="layout">
+    <div class="client-card__headtitle">
+        <h1 class="title title__clientCard">Start Up du Futur</h1>
+        <div class="client-card__side-infos">
+            <p>Add 03/06/2018 by
+                <a href="">Léa Sayarath</a>
+            </p>
+            <p>Last modified 3h ago by
+                <a href="">Alison Charrier</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="client-card__block-container client-card__block-container">
+        <div class="block-info">
+            <div class="block-info__head">
+                <h2 class="title__blockInfo">Account information</h2>
+                <a class="icon icon-edit open-edit"></a>
+            </div>
+            <div class="block-info__main">
+                <div class="block-info__content">
+                    <span class="icon-user"></span>
+                    <p class="block-info__text">Jean-Michel StartUpfutur</p>
+                </div>
+                <div class="block-info__content">
+                    <span class="icon-mail"></span>
+                    <p class="text-ellipsed">jean.michel@startupfutur.com</p>
+                </div>
+                <div class="block-info__content">
+                    <span class="icon-house"></span>
+                    <p class="block-info__text">33 rue marbeuf, 75008 Paris</p>
+                </div>
+                <div class="block-info__content">
+                    <span class="icon-phone"></span>
+                    <p class="block-info__text">06 79 24 55 39</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-info">
+            <div class="block-info__head">
+                <h2 class="title__blockInfo">Process</h2>
+                <a class="icon icon-edit open-process"></a>
+            </div>
+            <div class="block-info__main">
+                <div class="block-info__content--singleLine">
+                    <span class="label">Status</span>
+                    <span class="tag__process processing">In process</span>
+                </div>
+                <div class="block-info__content--singleLine">
+                    <span class="label">Client status</span>
+                    <span>True prospect</span>
+                </div>
+                <div class="block-info__content--singleLine">
+                    <span class="label">Client origin</span>
+                    <span>Internet SEO</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="block-info">
+            <div class="block-info__head">
+                <h2 class="title__blockInfo">Complementary infos</h2>
+                <a class="icon icon-edit open-complementary"></a>
+            </div>
+            <div class="block-info__main">
+                <div class="block-info__content--singleLine">
+                    <span class="label">Impact level</span>
+                    <span class="tag__impact--simple high">High</span>
+                </div>
+                <div class="block-info__content--singleLine">
+                    <span class="label">Actual account manager</span>
+                    <a href="">Alison Charrier</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="js/client.js"></script>
+
+
+</html>
