@@ -18,7 +18,7 @@
       modal.classList.toggle("modalClosed");
       STEPS[0].classList.toggle("create-client__modal-step-active");
       CURRENT_STEPPER[0].classList.add("current");
-      layout.classList.add("layout__dashboard");
+      layout.classList.toggle("layout__dashboard");
     });
 
     // Form management
@@ -84,6 +84,7 @@
       for (var i = 0; i < STEPS.length; i++) {
         STEPS[i].classList.remove("create-client__modal-step-active");
       }
+      INFOS_ACTION_BUTTON.innerHTML = count + 1 + "/3";
     });
   }
 

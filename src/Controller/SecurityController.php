@@ -63,8 +63,10 @@ class SecurityController extends BaseController
         if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['sign-up-button'] = 'Sign up'){
             $verif = $this->verifSalesRegister($_POST);
 
+
             if ($verif != false) {
                 $this->sales->register($_POST);
+
 
                 header('Location: ./?a=sign-in');
                 exit();
@@ -102,8 +104,8 @@ class SecurityController extends BaseController
                  AND pwd = :pwd";
 
         $requete = $this->bdd->prepare($sql);
-        $requete->bindValue('mail', $data['mail']);
-        $requete->bindValue('pwd', hash("sha256",$data['pwd']));
+        $requete->bindValue('mail', $data['email']);
+        $requete->bindValue('pwd', hash("sha256",$data['password']));
         $requete->execute();
 
 
@@ -124,8 +126,8 @@ class SecurityController extends BaseController
                  AND pwd = :pwd";
 
         $requete = $this->bdd->prepare($sql);
-        $requete->bindValue('mail', $data['mail']);
-        $requete->bindValue('pwd', hash("sha256",$data['pwd']));
+        $requete->bindValue('mail', $data['email']);
+        $requete->bindValue('pwd', hash("sha256",$data['password']));
         $requete->execute();
 
 
@@ -147,7 +149,7 @@ class SecurityController extends BaseController
                  ";
 
         $requete = $this->bdd->prepare($sql);
-        $requete->bindValue('mail', $data['mail']);
+        $requete->bindValue('mail', $data['email']);
         $requete->execute();
 
 
@@ -169,8 +171,8 @@ class SecurityController extends BaseController
                  AND pwd = :pwd";
 
         $requete = $this->bdd->prepare($sql);
-        $requete->bindValue('mail', $data['mail']);
-        $requete->bindValue('pwd', hash("sha256",$data['pwd']));
+        $requete->bindValue('mail', $data['email']);
+        $requete->bindValue('pwd', hash("sha256",$data['password']));
         $requete->execute();
 
 

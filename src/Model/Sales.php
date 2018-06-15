@@ -81,8 +81,8 @@ class Sales
                     mail = :mail";
 
         $stmt = $this->connect->prepare($query);
-        $stmt->bindValue('mail', $data['mail'] ?? '');
-        $stmt->bindValue('pwd', hash("sha256",$data['pwd']) ?? '');
+        $stmt->bindValue('mail', $data['email'] ?? '');
+        $stmt->bindValue('pwd', hash("sha256",$data['password']) ?? '');
         $stmt->execute();
 
         return true;

@@ -3,7 +3,10 @@
 {% set classBody = 'sign-up' %}
 {% block body %}
     <div class="layout">
-        <header class="header-connect"><a href="">Oply</a></header>
+        <header class="header-connect">
+            <a href="">Oply</a>
+        </header>
+
         <main>
             <div class="sign-up__main">
                 <div class="sign-up__headtitle">
@@ -11,7 +14,7 @@
                     <p class="subtitle">Petite catchline des familles</p>
                 </div>
 
-                <form action="" method="post" class="formData">
+                <form action="" method="post" name="SIGNUP" class="formData">
                     <div class="sign-up__form-body">
                         <div class="field">
                             <label for="" class="label">Email address
@@ -21,14 +24,16 @@
                                 <span class="input__icon">
                                     <i class="icon-mail"></i>
                                 </span>
-                                <input type="text" name="mail" class="input__text" placeholder="johnidoe@oply.com">
+                                <input type="text" name="email" class="input__text" placeholder="johnidoe@oply.com">
                             </div>
                         </div>
                         <div class="field">
                             <label for="" class="label">Password</label>
                             <div class="input__text-icon">
-                                <span class="input__icon"><i class="icon-key"></i></span>
-                                <input type="password" name="pwd" class="input__text" placeholder="johnidoe@oply.com">
+                                <span class="input__icon">
+                                    <i class="icon-key"></i>
+                                </span>
+                                <input type="password" name="password" class="input__text" placeholder="johnidoe@oply.com">
                             </div>
                         </div>
                         <div class="field">
@@ -37,7 +42,7 @@
                                 <span class="input__icon">
                                     <i class="icon-key"></i>
                                 </span>
-                                <input type="password" name="pwd2" class="input__text" placeholder="johnidoe@oply.com">
+                                <input type="password" name="confirmPassword" class="input__text" placeholder="johnidoe@oply.com">
                             </div>
                         </div>
                     </div>
@@ -57,6 +62,7 @@
         </main>
     </div>
 {% endblock %}
-{% block javascript %}
-    <script src="web/js/actions.js"></script>
+{% block javascripts %}
+    {#<script src="js/actions.js">#}
+    {#</script>#}
 {% endblock %}
