@@ -1,0 +1,267 @@
+{% extends "./index.html.twig" %}
+{% set classBody = 'dashboard' %}
+    {% block body %}
+        {% include "./layout/header2.html.twig" %}
+
+        <div class="layout">
+            <div class="client-card__headtitle">
+                <h1 class="title title__clientCard">Start Up du Futur</h1>
+                <div class="client-card__side-infos">
+                    <p>Add 03/06/2018 by
+                        <a href="">Léa Sayarath</a>
+                    </p>
+                    <p>Last modified 3h ago by
+                        <a href="">Alison Charrier</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="client-card__block-container client-card__block-container">
+                <div class="block-info">
+                    <div class="block-info__head">
+                        <h2 class="title__blockInfo">Account information</h2>
+                        <a class="icon icon-edit open-edit"></a>
+                    </div>
+                    <div class="block-info__main">
+                        <div class="block-info__content">
+                            <span class="icon-user"></span>
+                            <p class="block-info__text">Jean-Michel StartUpfutur</p>
+                        </div>
+                        <div class="block-info__content">
+                            <span class="icon-mail"></span>
+                            <p class="text-ellipsed">jean.michel@startupfutur.com</p>
+                        </div>
+                        <div class="block-info__content">
+                            <span class="icon-house"></span>
+                            <p class="block-info__text">33 rue marbeuf, 75008 Paris</p>
+                        </div>
+                        <div class="block-info__content">
+                            <span class="icon-phone"></span>
+                            <p class="block-info__text">06 79 24 55 39</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-info">
+                    <div class="block-info__head">
+                        <h2 class="title__blockInfo">Process</h2>
+                        <a class="icon icon-edit open-process"></a>
+                    </div>
+                    <div class="block-info__main">
+                        <div class="block-info__content--singleLine">
+                            <span class="label">Status</span>
+                            <span class="tag__process processing">In process</span>
+                        </div>
+                        <div class="block-info__content--singleLine">
+                            <span class="label">Client status</span>
+                            <span>True prospect</span>
+                        </div>
+                        <div class="block-info__content--singleLine">
+                            <span class="label">Client origin</span>
+                            <span>Internet SEO</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="block-info">
+                    <div class="block-info__head">
+                        <h2 class="title__blockInfo">Complementary infos</h2>
+                        <a class="icon icon-edit open-complementary"></a>
+                    </div>
+                    <div class="block-info__main">
+                        <div class="block-info__content--singleLine">
+                            <span class="label">Impact level</span>
+                            <span class="tag__impact--simple high">High</span>
+                        </div>
+                        <div class="block-info__content--singleLine">
+                            <span class="label">Actual account manager</span>
+                            <a href="">Alison Charrier</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-info">
+                <div class="block-info__head">
+                    <h2 class="title__blockInfo">Rapport de visite</h2>
+                </div>
+
+                <div class="block-info__content--centered">
+                    <p>No data to display</p>
+                    <button class="btn btn__visit">
+                        <i class="icon-add"></i>Ajouter un rapport de visite</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CREATE POPIN ACCOUNT INFORMATION -->
+        <div class="create-client__modal edit__accountInformation modal-custom">
+            <div class="modal__head">
+                <h1 class="title__dashboard popin">Modify : Account information</h1>
+            </div>
+            <div class="modal__main">
+                <div class="create-client__modal-contain with-divider">
+                    <div class="field__divider">
+                        <div class="field">
+                            <label for="" class="label">Civility</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Email</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Company name</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field__divider">
+                        <div class="field">
+                            <label for="" class="label">Last name</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Phone</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Company city</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field__divider">
+                        <div class="field">
+                            <label for="" class="label">First name</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Company address</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Company zipcode</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="create-client__modal-footer">
+                <div class="create-client__modal-btn-outer">
+                    <button class="btn create-client__modal-btn cancel">
+                        <span class="btn__inner-text cancel">Cancel</span>
+                    </button>
+                </div>
+                <div class="create-client__modal-btn-outer">
+                    <button class="btn create-client__modal-btn">
+                        <span class="btn__inner-text change">Validate the change</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CREATE POPIN MODIFY COMPLEMENTARY -->
+        <div class="create-client__modal edit__complementaryInfos modal-custom">
+            <div class="modal__head">
+                <h1 class="title__dashboard popin">Modify : Complementary infos</h1>
+            </div>
+            <div class="modal__main">
+                <div class="create-client__modal-contain with-divider">
+                    <div class="field__divider">
+                        <div class="field">
+                            <label for="" class="label">Impact level</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Actual account manager</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="create-client__modal-footer">
+                <div class="create-client__modal-btn-outer">
+                    <button class="btn create-client__modal-btn cancel">
+                        <span class="btn__inner-text cancel">Cancel</span>
+                    </button>
+                </div>
+                <div class="create-client__modal-btn-outer">
+                    <button class="btn create-client__modal-btn">
+                        <span class="btn__inner-text change">Validate the change</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- CREATE POPIN MODIFY PROCESS -->
+        <div class="create-client__modal edit__process modal-custom">
+            <div class="modal__head">
+                <h1 class="title__dashboard popin">Modify : Process</h1>
+            </div>
+            <div class="modal__main">
+                <div class="create-client__modal-contain with-divider">
+                    <div class="field__divider">
+                        <div class="field">
+                            <label for="" class="label">Status</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Client Status</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Client origin</label>
+                            <div class="input__text-icon">
+                                <input type="text" class="input__text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="create-client__modal-footer">
+                <div class="create-client__modal-btn-outer">
+                    <button class="btn create-client__modal-btn cancel">
+                        <span class="btn__inner-text cancel">Cancel</span>
+                    </button>
+                </div>
+                <div class="create-client__modal-btn-outer">
+                    <button class="btn create-client__modal-btn">
+                        <span class="btn__inner-text change">Validate the change</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/client.js"></script>
+
+    {% endblock %}
+
+{% block javascripts %}
+    <script src="js/client.js"></script>
+{% endblock %}
+

@@ -3,7 +3,10 @@
 {% set classBody = 'sign-up' %}
 {% block body %}
     <div class="layout">
-        <header class="header-connect"><a href="">Oply</a></header>
+        <header class="header-connect">
+            <a href="">Oply</a>
+        </header>
+
         <main>
             <div class="sign-up__main">
                 <div class="sign-up__headtitle">
@@ -11,27 +14,35 @@
                     <p class="subtitle">Petite catchline des familles</p>
                 </div>
 
-                <form action="" method="post">
+                <form action="" method="post" name="SIGNUP" class="formData">
                     <div class="sign-up__form-body">
                         <div class="field">
-                            <label for="" class="label">Email address<i class="tooltip-info icon-tooltip"></i></label>
+                            <label for="" class="label">Email address
+                                <i class="tooltip-info icon-tooltip"></i>
+                            </label>
                             <div class="input__text-icon">
-                                <span class="input__icon"><i class="icon-mail"></i></span>
-                                <input type="text" name="mail" class="input__text" placeholder="johnidoe@oply.com">
+                                <span class="input__icon">
+                                    <i class="icon-mail"></i>
+                                </span>
+                                <input type="text" name="email" class="input__text" placeholder="johnidoe@oply.com">
                             </div>
                         </div>
                         <div class="field">
                             <label for="" class="label">Password</label>
                             <div class="input__text-icon">
-                                <span class="input__icon"><i class="icon-key"></i></span>
-                                <input type="password" name="pwd" class="input__text" placeholder="johnidoe@oply.com">
+                                <span class="input__icon">
+                                    <i class="icon-key"></i>
+                                </span>
+                                <input type="password" name="password" class="input__text" placeholder="johnidoe@oply.com">
                             </div>
                         </div>
                         <div class="field">
                             <label for="" class="label">Confirmation of password</label>
                             <div class="input__text-icon">
-                                <span class="input__icon"><i class="icon-key"></i></span>
-                                <input type="password" name="pwd2" class="input__text" placeholder="johnidoe@oply.com">
+                                <span class="input__icon">
+                                    <i class="icon-key"></i>
+                                </span>
+                                <input type="password" name="confirmPassword" class="input__text" placeholder="johnidoe@oply.com">
                             </div>
                         </div>
                     </div>
@@ -40,7 +51,9 @@
                         <div class="btn__outer">
                             <button value="Sign up" name="sign-up-button" class="btn btn__center">Sign up now</button>
                         </div>
-                        <p class="btn__bottom-msg">Already have an account? <a href="/?a=sign-in">Sign in here</a></p>
+                        <p class="btn__bottom-msg">Already have an account?
+                            <a href="/?a=sign-in">Sign in here</a>
+                        </p>
                     </div>
                 </form>
             </div>
@@ -48,4 +61,8 @@
             <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528813897/illustrations/illu-connect.png" class="sign-up__bg-connect">
         </main>
     </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="js/client.js"></script>
+    <script src="js/select.js"></script>
 {% endblock %}

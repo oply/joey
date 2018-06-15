@@ -63,7 +63,7 @@ class Admin
         $stmt = $this->connect->prepare($query);
         $stmt->bindValue('name', $data['name']);
         $stmt->bindValue('mail,', $data['mail']);
-        $stmt->bindValue('pwd,', $data['pwd']);
+        $stmt->bindValue('pwd,', hash("sha256",$data['pwd']));
         $stmt->execute();
         //        $this->errorManagement($stmt);
         return $this->connect->lastInsertId();
@@ -85,7 +85,7 @@ class Admin
         $stmt->bindValue('id', $data['id']);
         $stmt->bindValue('name,', $data['name'] ?? '');
         $stmt->bindValue('mail,', $data['mail'] ?? '');
-        $stmt->bindValue('pwd,', $data['pwd'] ?? '');
+        $stmt->bindValue('pwd,', hash("sha256",$data['pwd']) ?? '');
         $stmt->execute();
 
         return true;

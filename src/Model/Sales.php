@@ -61,7 +61,7 @@ class Sales
 
         $stmt = $this->connect->prepare($query);
         $stmt->bindValue('mail',       $data['mail']);
-        $stmt->bindValue('pwd',        $data['pwd']);
+        $stmt->bindValue('pwd',        hash("sha256",$data['pwd']));
         $stmt->bindValue('phone',      $data['phone']);
         $stmt->bindValue('first_name', $data['first_name']);
         $stmt->bindValue('last_name',  $data['last_name']);
@@ -81,8 +81,8 @@ class Sales
                     mail = :mail";
 
         $stmt = $this->connect->prepare($query);
-        $stmt->bindValue('mail', $data['mail'] ?? '');
-        $stmt->bindValue('pwd', $data['pwd'] ?? '');
+        $stmt->bindValue('mail', $data['email'] ?? '');
+        $stmt->bindValue('pwd', hash("sha256",$data['password']) ?? '');
         $stmt->execute();
 
         return true;
@@ -104,7 +104,7 @@ class Sales
         $stmt = $this->connect->prepare($query);
         $stmt->bindValue('id', $data['id']);
         $stmt->bindValue('mail', $data['mail'] ?? '');
-        $stmt->bindValue('pwd', $data['pwd'] ?? '');
+        $stmt->bindValue('pwd', hash("sha256",$data['pwd']) ?? '');
         $stmt->bindValue('phone', $data['phone'] ?? '');
         $stmt->bindValue('first_name', $data['first_name'] ?? '');
         $stmt->bindValue('last_name', $data['last_name'] ?? '');

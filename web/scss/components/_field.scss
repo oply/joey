@@ -14,11 +14,13 @@
     }
 
     &--error {
+        margin-bottom: 1rem;
+
         .label {
             color: $orange;
         }
     
-        .input__text {
+        .input__text-icon {
             border-color: $orange;
         }
     }

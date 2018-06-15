@@ -1,0 +1,34 @@
+<header class="header">
+    <div class="header__inner">
+        <div class="header__lside">
+            <a href="" class="header__logo">
+                <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">
+                <span>JOEY</span>
+            </a>
+
+            <nav class="header__nav">
+                <ul class="header__nav-inner">
+                    <li class="header__nav-el current">
+                        <a href="?a=sales/client/list">Client list</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header__rside">
+            <button class="btn btn__client addClientButton">
+                <a class="icon-add-user" href="?a=sales/client/add"></a>Add a client
+            </button>
+            <div class="user">
+                <p class="user__name">Mr. {{ sessionUser }}
+                    <i class="icon-arrow-bottom"></i>
+                </p>
+                <div class="user__log-out">
+                    <a href="?a=sign-out/" class="user__log-out__link">
+                        <i class="icon-log-out"></i>Log out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

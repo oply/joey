@@ -59,19 +59,15 @@ class FrontController
                     $output     = $controller->adminDeleteClient();
                     break;
 
-
-                case "sales/client";
+                case "sales/client/list";
                     $controller = new SalesController();
-                    $output     = $controller->salesClient();
+                    $output     = $controller->salesListClient();
                     break;
 
-//                case "admin/sales";
-//                    $controller = new AdminController();
-//                    $output     = $controller->
-//                case "details":
-//                    $controller = new PageController();
-//                    $output = $controller->adminDetails();
-//                    break;
+                case "sales/client/update";
+                    $controller = new SalesController();
+                    $output     = $controller->salesUpdateClient();
+                    break;
 //
 //                default:
 //                    $controller = new PageController();
