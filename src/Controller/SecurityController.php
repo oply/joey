@@ -14,6 +14,7 @@ class SecurityController extends BaseController
     private $mail;
     private $pwd;
     private $role;
+    private $firstName;
     private $session;
     private $bdd;
     private $sales;
@@ -28,6 +29,7 @@ class SecurityController extends BaseController
 
     public function signIn()
     {
+        $error = null;
         if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['connexion_bouton'] = 'Se Connecter'){
            $verif = $this->verif($_POST);
 
@@ -60,6 +62,7 @@ class SecurityController extends BaseController
 
     public function signUp()
     {
+        $error = null;
         if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['sign-up-button'] = 'Sign up'){
             $verif = $this->verifSalesRegister($_POST);
 
@@ -118,6 +121,7 @@ class SecurityController extends BaseController
                   id,
                  mail,
                  pwd,
+                 first_name,
                  role
                  FROM
                  sales
@@ -141,6 +145,7 @@ class SecurityController extends BaseController
                   id,
                  mail,
                  pwd,
+                 first_name,
                  role
                  FROM
                  sales
@@ -163,6 +168,7 @@ class SecurityController extends BaseController
                   id,
                  mail,
                  pwd,
+                 first_name,
                  role
                  FROM
                  client
@@ -186,6 +192,7 @@ class SecurityController extends BaseController
         if($reponse){
             $this->setId($reponse['id']);
             $this->setPwd($reponse['pwd']);
+            $this->setFirstName($reponse['first_name']);
             $this->setMail($reponse['mail']);
             $this->setRole($reponse['role']);
             return 1;
@@ -194,6 +201,7 @@ class SecurityController extends BaseController
             if($reponse){
                 $this->setId($reponse['id']);
                 $this->setPwd($reponse['pwd']);
+                $this->setFirstName($reponse['first_name']);
                 $this->setMail($reponse['mail']);
                 $this->setRole($reponse['role']);
                 return 1;
@@ -203,6 +211,7 @@ class SecurityController extends BaseController
                 if($reponse){
                     $this->setId($reponse['id']);
                     $this->setPwd($reponse['pwd']);
+                    $this->setFirstName($reponse['first_name']);
                     $this->setMail($reponse['mail']);
                     $this->setRole($reponse['role']);
                     return 1;
@@ -222,6 +231,7 @@ class SecurityController extends BaseController
         $this->session->id = $this->getId();
         $this->session->mail = $this->getMail();
         $this->session->role = $this->getRole();
+        $this->session->firstName = $this->getFirstName();
 
 //        return 1;
     }
@@ -289,6 +299,22 @@ class SecurityController extends BaseController
         $this->role = $role;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstName(){
+        return $this->firstName;
+    }
+
+    /**
+     * @param mixed $firstName
+     */
+    public function setFirstName($firstName){
+        $this->firstName = $firstName;
+    }
+
+
 
 
 

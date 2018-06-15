@@ -1,102 +1,190 @@
 {% extends "./index.html.twig" %}
+{% set classBody = 'dashboard' %}
+    {% block body %}
+        {% include "./layout/header2.html.twig" %}
+        <div class="layout ">
+            <h1 class="title__dashboard">Client list</h1>
+            <table class="table">
+                <tr class="table__head-row">
+                    <th>
+                        <div class="table__head-cell current">
+                            Account name
+                            <i class="icon-arrow-bottom"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table__head-cell">
+                            Last name
+                            <i class="icon-arrow-bottom"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table__head-cell">
+                            Name
+                            <i class="icon-arrow-bottom"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table__head-cell">
+                            Status
+                            <i class="icon-arrow-bottom"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table__head-cell">
+                            Created at
+                            <i class="icon-arrow-bottom"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table__head-cell">
+                            Office home
+                            <i class="icon-arrow-bottom"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table__head-cell">
+                            Impact level
+                            <i class="icon-arrow-bottom"></i>
+                        </div>
+                    </th>
+                </tr>
+                {% for client in clients %}
 
-{% block body %}
-    <header class="header">
-        <div class="header__inner">
-            <div class="header__lside">
-                <a href="" class="header__logo">
-                    <img src="https://res.cloudinary.com/dj09xr9gd/image/upload/v1528893547/logo_1.svg">
-                    <span>JOEY</span>
-                </a>
-
-        <nav class="header__nav">
-          <ul class="header__nav-inner">
-            <li class="header__nav-el current">
-              <a href="">Client list</a>
-            </li>
-          </ul>
-        </nav>
-
-            </div>
-
-            <div class="header__rside">
-                <button class="btn btn__client addClientButton">
-                    <a class="icon-add-user" href="?a=sales/client/add"></a>Add a client
-                </button>
-                <div class="user">
-                    <p class="user__name">Mr. John Doe
-                        <i class="icon-arrow-bottom"></i>
-                    </p>
-                    <div class="user__log-out">
-                        <a href="?a=sign-out/" class="user__log-out__link">
-                            <i class="icon-log-out"></i>Log out</a>
+                    <tr class="table__body-row">
+                        <td class="table__body-cell">{{ client.company }}</td>
+                        <td class="table__body-cell">{{ client.last_name }}</td>
+                        <td class="table__body-cell">{{ client.first_name }}</td>
+                        <td class="table__body-cell">
+                            <span class="tag__process color-turquoise">{{ client.status }}</span>
+                        </td><td class="table__body-cell">{{ client.date_create }}</td>
+                        <td class="table__body-cell">{{ client.phone }}</td>
+                        <td class="table__body-cell">
+                            <span class="tag__impact high">{{ client.property }}</span>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="create-client__modal modalClosed">
+            <form action="">
+            <div class="modal__head">
+                <h1 class="title__dashboard">Create a new client</h1>
+                <div class="stepper">
+                    <div class="stepper__steps">
+                        <div class="stepper__step current">
+                            <span class="stepper__step-number">1</span>
+                            <span class="stepper__step-label">Personal informations</span>
+                        </div>
+                        <div class="stepper__step">
+                            <span class="stepper__step-number">2</span>
+                            <span class="stepper__step-label">Client company informations</span>
+                        </div>
+                        <div class="stepper__step">
+                            <span class="stepper__step-number">3</span>
+                            <span class="stepper__step-label">Process</span>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="modal__main">
+                <!-- step 1 -->
+                <div class="create-client__modal-step step">
+                    <div class="field">
+                        <label for="" class="label">Civility</label>
+                        <div class="custom-select-wrapper">
+                            <select name="sources" id="sources" class="custom-select sources" placeholder="SELECTOR" style="display: none;">
+                                <option value="profile">Mr.</option>
+                                <option value="profile">Mrs.</option>
+                                <option value="word">Miss</option>
+                            </select>
+                            <div class="custom-select sources">
+                    <span class="custom-select-trigger">
+                        <span>Civility</span>
+                        <i class="icon-select"></i>
+                    </span>
+                                <div class="custom-options">
+                                    <span class="custom-option" data-value="profile">Mr.</span>
+                                    <span class="custom-option" data-value="profile">Mrs.</span>
+                                    <span class="custom-option" data-value="word">Miss</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">First name</label>
+                        <input type="text" class="input__text" placeholder="Exemple: John">
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Last name</label>
+                        <input type="text" class="input__text" placeholder="Exemple: Doe">
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Email</label>
+                        <div class="input__text-icon">
+            <span class="input__icon">
+              <i class="icon-mail"></i>
+            </span>
+                            <input type="text" class="input__text" placeholder="johnidoe@oply.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Phone</label>
+                        <div class="input__text-icon">
+            <span class="input__icon">
+              <i class="icon-phone"></i>
+            </span>
+                            <input type="text" class="input__text" placeholder="+331 01 02 03 04">
+                        </div>
+                    </div>
+                </div>
+                <!-- step 2 -->
+                <div class="create-client__modal-step with-divider step">
+                    <div class="field__divider">
+                        <div class="field">
+                            <label for="" class="label">Company name</label>
+                            <input type="text" class="input__text" placeholder="Exemple: Oply">
+                        </div>
+                    </div>
+                    <div class="field__divider">
+                        <div class="field">
+                            <label for="" class="label">Company address</label>
+                            <input type="text" class="input__text" placeholder="Exemple: 10 Carnaby St.">
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Company zipcode</label>
+                            <input type="text" class="input__text" placeholder="Exemple: 95020">
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Company city</label>
+                            <input type="text" class="input__text" placeholder="Exemple: London">
+                        </div>
+                    </div>
+                </div>
+                <!-- final step : success ! -->
+                <div class="create-client__modal-step success step">
+                    <h2 class="modal__main-title">All done!</h2>
+                    <p>The client
+                        <b>Alison Charrier</b> has been created with success.</p>
+                    <a href="">Check his customer card now</a>
+                </div>
+            </div>
+            <div class="create-client__modal-footer">
+                <div class="create-client__modal-btn-outer">
+                    <button class="btn create-client__modal-btn cancel">
+                        <span class="btn__inner-text cancel">Cancel</span>
+                    </button>
+                </div>
+                <div class="create-client__modal-btn-outer">
+                    <button class="btn create-client__modal-btn next-step">
+                        <span class="btn__inner-text">1 / 3</span>
+                        <span class="btn__inner-text">Étape suivante</span>
+                    </button>
+                </div>
+            </div>
         </div>
-    </header>
-    <div class="layout layout__dashboard">
-        <h1 class="title__dashboard">Client list</h1>
-        <table class="table">
-            <tr class="table__head-row">
-                <th>
-                    <div class="table__head-cell current">
-                        Account name
-                        <i class="icon-arrow-bottom"></i>
-                    </div>
-                </th>
-                <th>
-                    <div class="table__head-cell">
-                        Last name
-                        <i class="icon-arrow-bottom"></i>
-                    </div>
-                </th>
-                <th>
-                    <div class="table__head-cell">
-                        Name
-                        <i class="icon-arrow-bottom"></i>
-                    </div>
-                </th>
-                <th>
-                    <div class="table__head-cell">
-                        Status
-                        <i class="icon-arrow-bottom"></i>
-                    </div>
-                </th>
-                <th>
-                    <div class="table__head-cell">
-                        Created at
-                        <i class="icon-arrow-bottom"></i>
-                    </div>
-                </th>
-                <th>
-                    <div class="table__head-cell">
-                        Office home
-                        <i class="icon-arrow-bottom"></i>
-                    </div>
-                </th>
-                <th>
-                    <div class="table__head-cell">
-                        Impact level
-                        <i class="icon-arrow-bottom"></i>
-                    </div>
-                </th>
-            </tr>
-            {% for client in clients %}
-
-            <tr class="table__body-row">
-                <td class="table__body-cell">{{ client.company }}</td>
-                <td class="table__body-cell">{{ client.last_name }}</td>
-                <td class="table__body-cell">{{ client.first_name }}</td>
-                <td class="table__body-cell">
-                    <span class="tag__process color-turquoise">{{ client.status }}</span>
-                </td><td class="table__body-cell">{{ client.date_create }}</td>
-                <td class="table__body-cell">{{ client.phone }}</td>
-                <td class="table__body-cell">
-                    <span class="tag__impact high">{{ client.property }}</span>
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
+    {% endblock %}
+{% block javascripts %}
+    <script src="js/client.js"></script>
+    <script src="js/select.js"></script>
 {% endblock %}

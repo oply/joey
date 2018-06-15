@@ -31,18 +31,45 @@ class SalesController extends BaseController
     {
 
         $clients = $this->client->findClientBySalse($this->session->id);
+        $session = $this->session->firstName;
 
-        echo self::$twig->render("sales/salesClient.html.twig", [
-            'clients' => $clients
+        echo self::$twig->render("sales/salesClientList.html.twig", [
+            'clients' => $clients,
+            'sessionUser' => $session
+        ]);
+
+    }
+    public function salesListClient()
+    {
+
+        $clients = $this->client->findClientBySalse($this->session->id);
+        $session = $this->session->firstName;
+
+
+        echo self::$twig->render("sales/salesClientList.html.twig", [
+            'clients' => $clients,
+            'sessionUser' => $session
         ]);
 
     }
 
     public function salesAddClient()
     {
-
+        $session = $this->session->firstName;
 
         echo self::$twig->render("sales/salesClientAdd.html.twig", [
+            'sessionUser' => $session
+
+        ]);
+
+    }
+    public function salesUpdateClient()
+    {
+        $session = $this->session->firstName;
+
+        echo self::$twig->render("sales/salesClientUpdate.html.twig", [
+            'sessionUser' => $session
+
         ]);
 
     }

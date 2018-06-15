@@ -10,15 +10,14 @@
 </head>
 {% if classBody is not null %}
 <body class="{{ classBody }}">
-    {% else %}
-    <body>
+{% else %}
+<body>
 {% endif %}
 {% block body %}
 
 {% endblock %}
 
-    {% block javascripts %}
-
+{% block javascripts %}
 {% endblock %}
 </body>
 </html>
