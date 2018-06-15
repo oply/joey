@@ -37,7 +37,7 @@ class SecurityController extends BaseController
                $this->session();
 
                if($this->session->role == 'sales'){
-                   header('Location: ./?a=sales/client');
+                   header('Location: ./?a=sales/client/list');
                    exit();
                }elseif ($this->session->role == 'client'){
                    header('Location: ./?a=sales/client');
